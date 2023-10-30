@@ -1,0 +1,247 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4baeda8f023a8044b1eff0f67d9d93e, type: 3}
+  m_Name: Upgrade Items
+  m_EditorClassIdentifier: 
+  Weapons:
+  - ID: 0
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 10
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 0
+    OrbitalSpeed: 0
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 0f46a794b62959e41a1a3cdfdd1c6c64, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 135146, guid: 10e9567c07b27ff489314fab4fdac633, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 107096, guid: de7f6c1f2a8b9db4aa40c9c36c69c1e1, type: 3}
+    <UnlockLevel>k__BackingField: 0
+    <Damage>k__BackingField: 1
+    FACTOR: 0.1
+    <ShootInterval>k__BackingField: 1
+    <BulletSpeed>k__BackingField: 5
+  - ID: 1
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 50
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 1
+    OrbitalSpeed: 10
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 9dbaa85bb2011e24ca9d1e206842c424, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 169190, guid: faab4096a2e3bbc41866ed54b76ba439, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 134664, guid: f52f287b1d58ff8408e86bba80c5c791, type: 3}
+    <UnlockLevel>k__BackingField: 0
+    <Damage>k__BackingField: 5
+    FACTOR: 0.2
+    <ShootInterval>k__BackingField: 0.5
+    <BulletSpeed>k__BackingField: 30
+  - ID: 2
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 250
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 1.25
+    OrbitalSpeed: 20
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: fb960d5a1e65b50439d0fea03209f59b, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 196392, guid: cc9f83777f845a14ead213fab182aec6, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 109660, guid: cbb6ae15d907f69469219ccff765f625, type: 3}
+    <UnlockLevel>k__BackingField: 3
+    <Damage>k__BackingField: 120
+    FACTOR: 0.32
+    <ShootInterval>k__BackingField: 1.5
+    <BulletSpeed>k__BackingField: 3
+  - ID: 3
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 500
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 1.5
+    OrbitalSpeed: 30
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 7994b1267a2f30f4795ebc38c41e6268, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 147436, guid: bebcbff18e6f91048b09dc7553a8626c, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 130848, guid: 32990cb242773e448b70c0bff8d7bf7b, type: 3}
+    <UnlockLevel>k__BackingField: 5
+    <Damage>k__BackingField: 260
+    FACTOR: 0.4
+    <ShootInterval>k__BackingField: 1.3
+    <BulletSpeed>k__BackingField: 3
+  - ID: 4
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 750
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 1.75
+    OrbitalSpeed: 40
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 3f8e066c84c59684aa3524797ae6a75b, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 1718891148821202, guid: c239c08386c690841952045917e533fb, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 104006, guid: cc48608419125a24491cb946b6639f2f, type: 3}
+    <UnlockLevel>k__BackingField: 7
+    <Damage>k__BackingField: 530
+    FACTOR: 0.50476193
+    <ShootInterval>k__BackingField: 1.4
+    <BulletSpeed>k__BackingField: 3
+  - ID: 5
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 1000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 2
+    OrbitalSpeed: 50
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 150cd3ebf31054b4693d27e3387c68cd, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 114646, guid: 74cbb59012d6e5a47a20dab5cd7badd2, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 128324, guid: c1a173177f532414f8f7b2ff7b3e0ce2, type: 3}
+    <UnlockLevel>k__BackingField: 10
+    <Damage>k__BackingField: 720
+    FACTOR: 0.59999996
+    <ShootInterval>k__BackingField: 1.2
+    <BulletSpeed>k__BackingField: 3
+  - ID: 6
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 1500
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 2.25
+    OrbitalSpeed: 60
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: a0015d47d5b331d48a610b864f4a39fe, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 160792, guid: 2cd9a858c27ff644383ce40ffcf1cff4, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 153912, guid: 9014e30034c57fc40979365955cfd932, type: 3}
+    <UnlockLevel>k__BackingField: 15
+    <Damage>k__BackingField: 950
+    FACTOR: 0.7037037
+    <ShootInterval>k__BackingField: 0.9
+    <BulletSpeed>k__BackingField: 3
+  - ID: 7
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 2500
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 2.5
+    OrbitalSpeed: 70
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 1573d22981ebae2498da6d40d450acea, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 145690, guid: 127d67f4f05923244a25bbbc7f37bb55, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 160900, guid: 97f35e2504a2b674a84069d2cd1b3aa2, type: 3}
+    <UnlockLevel>k__BackingField: 20
+    <Damage>k__BackingField: 1200
+    FACTOR: 0.79999995
+    <ShootInterval>k__BackingField: 0.6
+    <BulletSpeed>k__BackingField: 3
+  - ID: 8
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 5000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 2.75
+    OrbitalSpeed: 80
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 0039939359d5b5e48907a007d20cac4a, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 1729726317132538, guid: a16923dd245682842a00b4b9be7f9567, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 1197010802093610, guid: 1f409a1797c5a83428c29e754890ca4e, type: 3}
+    <UnlockLevel>k__BackingField: 30
+    <Damage>k__BackingField: 3600
+    FACTOR: 0.9
+    <ShootInterval>k__BackingField: 0.8
+    <BulletSpeed>k__BackingField: 3
+  - ID: 9
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 7500
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 3
+    OrbitalSpeed: 90
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 35fcc104c93943842a08b1187398235d, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 1671877646272590, guid: bcd7f1f45336e164389fb03909715d12, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 1341525123640686, guid: d9e3deb54a0d566438734cb2731448ea, type: 3}
+    <UnlockLevel>k__BackingField: 40
+    <Damage>k__BackingField: 6800
+    FACTOR: 1.0074074
+    <ShootInterval>k__BackingField: 0.9
+    <BulletSpeed>k__BackingField: 3
+  - ID: 10
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 10000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 3.25
+    OrbitalSpeed: 100
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: ac083529ac6dcfa4b8cb7eeb127ffaad, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 180214, guid: c75fb604ef78f314395848a8866b862d, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 1678425991723802, guid: 93d5750331ff1cb4b894fac1c5b7f633, type: 3}
+    <UnlockLevel>k__BackingField: 50
+    <Damage>k__BackingField: 11000
+    FACTOR: 1
+    <ShootInterval>k__BackingField: 1.1
+    <BulletSpeed>k__BackingField: 3
+  - ID: 11
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 15000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 3.5
+    OrbitalSpeed: 110
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 267938bb65b157e4dae44e0c52989629, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 173350, guid: 740d416b4dca4bc489e639ad2e3daa0e, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 159854, guid: 21291c067fdcba84ba5191512d353285, type: 3}
+    <UnlockLevel>k__BackingField: 60
+    <Damage>k__BackingField: 16500
+    FACTOR: 1.1
+    <ShootInterval>k__BackingField: 1
+    <BulletSpeed>k__BackingField: 3
+  - ID: 12
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 20000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 3.75
+    OrbitalSpeed: 120
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: d331753fbb974504fa5156e03a04a823, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 104164, guid: fd160991e6b59134e8b0a3f01ed75d95, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 169216, guid: 0d018b1b07ae23346a7d1f93cb7eac4e, type: 3}
+    <UnlockLevel>k__BackingField: 70
+    <Damage>k__BackingField: 16800
+    FACTOR: 1.2
+    <ShootInterval>k__BackingField: 0.7
+    <BulletSpeed>k__BackingField: 3
+  - ID: 13
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 25000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 4
+    OrbitalSpeed: 130
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 31123df053d58e54b8976a0696a3441a, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 183996, guid: 458a07364e0a3d247b87d8f765d6d1b9, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 111992, guid: 51a9622dc1ccf7e428cf21e039d82145, type: 3}
+    <UnlockLevel>k__BackingField: 80
+    <Damage>k__BackingField: 58500
+    FACTOR: 1.3000001
+    <ShootInterval>k__BackingField: 1.8
+    <BulletSpeed>k__BackingField: 3
+  - ID: 14
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 50000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 4.25
+    OrbitalSpeed: 140
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: dc7a74543d52d8c4e82de8aceb6ba993, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 113030, guid: 4957adde8169aef41a4d3ef85c852e81, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 130346, guid: 81991c9884316ed48b78fe7cf37716be, type: 3}
+    <UnlockLevel>k__BackingField: 90
+    <Damage>k__BackingField: 104000
+    FACTOR: 1.3
+    <ShootInterval>k__BackingField: 1.6
+    <BulletSpeed>k__BackingField: 3
+  - ID: 15
+    <Type>k__BackingField: 0
+    <BaseCost>k__BackingField: 100000
+    <ValueSuffix>k__BackingField: DPS
+    OrbitalRadius: 4.5
+    OrbitalSpeed: 150
+    <DisplayAnimation>k__BackingField: {fileID: 22100000, guid: 57c0c5f360fc93f4db5364867a48e396, type: 2}
+    <BulletPrefab>k__BackingField: {fileID: 1332586433228496, guid: 1b63d8025cd25a44d9e096c93a3f823e, type: 3}
+    <ImpactPrefab>k__BackingField: {fileID: 1037729608348760, guid: 5ba5796b1b001d14894df90e49e3f6f6, type: 3}
+    <UnlockLevel>k__BackingField: 100
+    <Damage>k__BackingField: 238000
+    FACTOR: 1.4
+    <ShootInterval>k__BackingField: 1.7
+    <BulletSpeed>k__BackingField: 3
+  Stats:
+  - ID: 16
+    <Type>k__BackingField: 1
+    <BaseCost>k__BackingField: 10
+    <ValueSuffix>k__BackingField: 
+    <InitialStats>k__BackingField: 100
+    <StatsPerLevel>k__BackingField: 1
+    <DisplayTranslation>k__BackingField: UpgradePanel/MAX_HEALTH
