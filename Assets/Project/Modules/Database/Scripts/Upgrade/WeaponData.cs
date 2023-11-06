@@ -1,5 +1,6 @@
 using Game;
 using System;
+using Unity.Collections;
 using UnityEngine;
 
 namespace Database
@@ -15,19 +16,28 @@ namespace Database
         [field: SerializeField] public int UnlockLevel { get; private set; }
 
         [field: SerializeField] public float Damage { get; private set; } = 10;
-#if UNITY_EDITOR
 
-        [field: SerializeField] public float FACTOR;
-#endif
         [field: SerializeField] public float ShootInterval { get; private set; } = 1f;
         [field: SerializeField] public float BulletSpeed { get; private set; } = 3f;
 
-        public float GetDamage() => GameBalance.Calculate(this.Damage, this.Level);
+        public float GetDamage()
+        {
+            return Math.Max(this.Damage, this.Damage * (float)Math.Pow(this.Level, 1.01d));
+        }
 
-        public float GetShootInterval() =>  Math.Max(0.5f, this.ShootInterval - (Math.Max(0, this.Level - 1) / 1000F));
+        public float GetShootInterval()
+        {
+            return Math.Max(0.5f, this.ShootInterval - (Math.Max(0, this.Level - 1) / 1000F));
+        }
 
-        public float GetBulletSpeed() =>  Math.Min(30, this.BulletSpeed + (Math.Max(0, this.Level - 1) / 1000F));
+        public float GetBulletSpeed()
+        {
+            return Math.Min(30, this.BulletSpeed + (Math.Max(0, this.Level - 1) / 1000F));
+        }
 
-        public override float GetValue() =>  this.GetDamage() / this.GetShootInterval();
+        public override float GetValue()
+        {
+            return this.GetDamage() / this.GetShootInterval();
+        }
     }
 }

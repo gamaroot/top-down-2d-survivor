@@ -24,6 +24,7 @@ namespace Game
             this._enemyDetector = enemyDetector;
         }
 
+        // Called in Start() function
         private void Shoot()
         {
             Transform target = this._enemyDetector.FindClosestTarget();

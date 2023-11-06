@@ -11,7 +11,6 @@ namespace Game
         [SerializeField] private TextMeshProUGUI _textSoundVolume, _textMusicVolume, _textVersion;
 
         [SerializeField] private RectTransform _panel;
-        [SerializeField] private GameObject[] _privacySettingsContent;
 
         private void Start()
         {
@@ -31,6 +30,11 @@ namespace Game
         {
             bool visibility = !this._animator.GetBool(AnimationParams.VISIBLE);
             this._animator.SetBool(AnimationParams.VISIBLE, visibility);
+        }
+
+        internal void OnPrivacyClick()
+        {
+            Application.OpenURL(URL.PRIVACY);
         }
 
         private void OnUpdateSoundVolume(float volume)

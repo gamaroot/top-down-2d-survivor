@@ -27,7 +27,7 @@ namespace Game
                 PlayerPrefs.SetFloat(MUSIC_LEVEL_KEY, value);
                 PlayerPrefs.Save();
 
-                //OnMusicVolumeChange.Invoke(value);
+                OnMusicVolumeChange.Invoke(value);
             }
         }
     }

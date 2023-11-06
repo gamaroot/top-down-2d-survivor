@@ -33,7 +33,7 @@ namespace Game
 
         private readonly object _lock = new();
 
-        private void Awake()
+        private void Start()
         {
             this._totalEnemyTypes = this._database.Enemies.Length;
             this._spawnProbabilities = this.CalculateSpawnProbabilities(this._totalEnemyTypes, out this._spawnProbabilitiesSum);
@@ -133,7 +133,6 @@ namespace Game
                 enemy.TurnIntoBoss();
                 enemy.OnHealthUpdated = onHealthUpdated;
             }
-            enemy.OnSpawn();
 
             return enemy;
         }

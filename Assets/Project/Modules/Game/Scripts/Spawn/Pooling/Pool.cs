@@ -79,13 +79,15 @@ namespace Game
 
         internal void SendBackToThePool(GameObject giveMeBack)
         {
-            giveMeBack.transform.position = Vector3.zero;
             giveMeBack.transform.SetParent(this._parentGameObject, true);
 
             this._pool.Push(giveMeBack);
         }
 
-        internal Transform GetParent() => this._parentGameObject;
+        internal Transform GetParent()
+        {
+            return this._parentGameObject;
+        }
 
         internal void DisableAll()
         {

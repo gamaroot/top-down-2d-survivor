@@ -28,8 +28,14 @@ namespace Database
             }
         }
         private int level = 0;
+        public float GetCost()
+        {
+            return (int)Math.Max(this.BaseCost, this.BaseCost * (float)Math.Pow(this.Level, 1.2));
+        }
 
-        public float GetCost() => (int)GameBalance.CalculatePrice(this.BaseCost, this.Level);
-        public virtual float GetValue() => 0;
+        public virtual float GetValue()
+        {
+            return 0;
+        }
     }
 }

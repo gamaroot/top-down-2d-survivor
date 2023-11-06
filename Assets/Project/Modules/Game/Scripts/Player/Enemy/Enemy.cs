@@ -19,6 +19,12 @@ namespace Game
         private void FixedUpdate()
         {
             base.Rigidbody.rotation += _rotationSpeed * Time.deltaTime;
+            base.Rigidbody.velocity = this._moveDirection;
+        }
+
+        private void Update()
+        {
+            this._moveDirection = this.Speed * (Player.Info.GetPosition() - base.transform.position).normalized;
         }
 
         internal void TurnIntoBoss()
@@ -29,12 +35,6 @@ namespace Game
             base.Damage = float.MaxValue;
 
             this.Speed /= 2f;
-        }
-
-        internal void OnSpawn()
-        {
-            this._moveDirection = this.Speed * (Player.Info.GetPosition() - base.transform.position).normalized;
-            base.Rigidbody.velocity = this._moveDirection;
         }
 
         internal override void OnHealthZero(DamagerObjectType type)

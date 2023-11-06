@@ -9,24 +9,29 @@ namespace Game
     {
         [Range(1f, 30f)]
         [SerializeField] private float _recoverDuration = 10f;
+        [SerializeField] private float _movementSpeed = 10f;
 
         [Header("Components")]
         [SerializeField] private HUD _hud;
         [SerializeField] private Animator _radar;
-        [SerializeField] private ParticleSystem[] _particles;
 
         internal static IPlayerInfo Info { get; private set; }
 
-        private void OnValidate()
-        {
-            if (this._particles == null)
-                this._particles = base.GetComponentsInChildren<ParticleSystem>();
-        }
+        private Vector2 _movement;
 
         private void Awake()
         {
             Info = this;
             base.indestructible = true;
+        }
+
+        private void Update()
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            float moveVertical = Input.GetAxis("Vertical");
+
+            this._movement = new Vector3(moveHorizontal * this._movementSpeed, moveVertical * this._movementSpeed, 0);
+            base.transform.parent.Translate(this._movement);
         }
 
         internal void Setup(float maxHealth)

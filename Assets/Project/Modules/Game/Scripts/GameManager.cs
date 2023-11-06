@@ -41,7 +41,10 @@ namespace Game
             this.SetupCoachMarks();
         }
 
-        private void Start() => this.OnMatchStart();
+        private void Start()
+        {
+            this.OnMatchStart();
+        }
 
         private void Update()
         {

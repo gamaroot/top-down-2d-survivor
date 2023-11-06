@@ -44,13 +44,21 @@ namespace Game
                 this.Rigidbody = base.GetComponent<Rigidbody2D>();
         }
 
-        private void OnCollisionEnter2D(Collision2D collision) => this.OnCollide(collision.gameObject);
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            this.OnCollide(collision.gameObject);
+        }
 
-        private void OnTriggerEnter2D(Collider2D collider) => this.OnCollide(collider.gameObject);
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            this.OnCollide(collider.gameObject);
+        }
 
         internal virtual void OnHealthZero(DamagerObjectType type)
         {
             ExplosionPool.Spawn(base.transform.position);
+
+            this.Rigidbody.velocity = Vector3.zero;
 
             this.OnDestroy?.Invoke(type);
             if (!this.indestructible)
@@ -61,7 +69,8 @@ namespace Game
         {
             if (this.Health <= 0) return;
 
-            if (collisionObj.TryGetComponent(out DamagerObject obj) && obj.Type != base.Type)
+            if (collisionObj.TryGetComponent(out DamagerObject obj) &&
+                obj.Type != base.Type)
             {
                 this.Health -= obj.Type == DamagerObjectType.Player ? this.MaxHealth : obj.Damage;
                 if (this.Health <= 0)

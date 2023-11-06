@@ -22,9 +22,6 @@ namespace Database
 
                 orbitalSpeed += 10f;
                 orbitalRadius += index == 1 ? 1f : 0.25f;
-#if UNITY_EDITOR
-                weapon.FACTOR = weapon.Damage / weapon.ShootInterval / weapon.BaseCost;
-#endif
             }
 
             foreach (StatsData stats in this.Stats)

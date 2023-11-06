@@ -7,5 +7,11 @@ namespace Game
 #else
         internal static string STORE => "https://itunes.apple.com/br/app/id123123123";
 #endif
+
+#if UNITY_ANDROID
+        internal static string PRIVACY => "https://mobile-game-privacy-policy.web.app/";
+#else
+        internal static string PRIVACY => "https://mobile-game-privacy-policy.web.app/";
+#endif
     }
 }

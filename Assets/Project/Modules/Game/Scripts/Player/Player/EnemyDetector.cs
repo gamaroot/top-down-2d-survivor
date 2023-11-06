@@ -9,10 +9,20 @@ namespace Game
 
         private readonly object _lock = new();
 
-        public Transform FindClosestTarget() => this._targets.Count > 0 ? this._targets[0] : null;
+        public Transform FindClosestTarget()
+        {
+            return this._targets.Count > 0 ? this._targets[0] : null;
+        }
 
-        private void OnTriggerEnter2D(Collider2D collider) => this.UpdateTargets(collider, true);
-        private void OnTriggerExit2D(Collider2D collider) => this.UpdateTargets(collider, false);
+        private void OnTriggerEnter2D(Collider2D collider)
+        {
+            this.UpdateTargets(collider, true);
+        }
+
+        private void OnTriggerExit2D(Collider2D collider)
+        {
+            this.UpdateTargets(collider, false);
+        }
 
         private void UpdateTargets(Collider2D collider, bool isToAdd)
         {

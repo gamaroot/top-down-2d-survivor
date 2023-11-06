@@ -13,7 +13,7 @@ namespace Game
 
         [SerializeField] private UpgradeItemDatabase _database;
         [SerializeField] private EnemyDetector _enemyDetector;
-        
+
         private readonly List<Weapon> _orbitalWeapons = new();
 
         private void Awake()
