@@ -48,7 +48,10 @@ namespace Game
                 Pool impactPool = _impactPools[id];
 
                 impactPool.Spawn(1f).position = hitPoint;
+                SFX.Play(SFXType.HIT, id);
             };
+            SFX.Play(SFXType.SHOOT, id);
+
             bullet.gameObject.SetActive(true);
 
             return bullet.transform;
