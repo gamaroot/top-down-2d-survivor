@@ -49,6 +49,7 @@ namespace Game
 
                 impactPool.Spawn(1f).position = hitPoint;
             };
+            bullet.gameObject.SetActive(true);
 
             return bullet.transform;
         }

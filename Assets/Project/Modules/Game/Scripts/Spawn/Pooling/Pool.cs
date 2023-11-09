@@ -37,7 +37,6 @@ namespace Game
                 this.AddObjectsToPool(ExpandedPoolSize);
 
             GameObject hereToYou = this._pool.Pop();
-            hereToYou.SetActive(true);
 
             this._onObjectActivated?.Invoke(hereToYou);
 

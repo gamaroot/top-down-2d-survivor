@@ -75,6 +75,86 @@ MonoBehaviour:
         und versuchen Sie es erneut."
       Flags: 00000000000000000000
       Languages_Touch: []
+    - Term: ScreenHome/TITLE
+      TermType: 0
+      Description: 
+      Languages:
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      - 5min Survivor
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: ScreenHome/PLAY
+      TermType: 0
+      Description: 
+      Languages:
+      - Play
+      - Jogar
+      - "\uB180\uB2E4"
+      - Jugar
+      - "\u73A9"
+      - "\u73A9"
+      - "\u904A\u3076"
+      - Jouer
+      - Giocare
+      - Spielen
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: ScreenHome/OPTIONS
+      TermType: 0
+      Description: 
+      Languages:
+      - Options
+      - "Op\xE7\xF5es"
+      - "\uC635\uC158"
+      - Opciones
+      - "\u9078\u9805"
+      - "\u9009\u9879"
+      - "\u30AA\u30D7\u30B7\u30E7\u30F3"
+      - Options
+      - Opzioni
+      - Optionen
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: ScreenStageSelection/TITLE
+      TermType: 0
+      Description: 
+      Languages:
+      - Stage Selection
+      - "Sele\xE7\xE3o de Fase"
+      - "\uC2A4\uD14C\uC774\uC9C0 \uC120\uD0DD"
+      - "Selecci\xF3n de Fase"
+      - "\u821E\u81FA\u9078\u64C7"
+      - "\u821E\u53F0\u9009\u62E9"
+      - "\u30B9\u30C6\u30FC\u30B8\u9078\u629E"
+      - "S\xE9lection de Phase"
+      - Selezione della Fase
+      - "B\xFChnenauswahl"
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: ScreenStageSelection/STAGE
+      TermType: 0
+      Description: 
+      Languages:
+      - Stage
+      - Fase
+      - Stage
+      - Fase
+      - "\u968E\u6BB5"
+      - "\u9636\u6BB5"
+      - "\u30B9\u30C6\u30FC\u30B8"
+      - Stage
+      - Fase
+      - "B\xFChne"
+      Flags: 00000000000000000000
+      Languages_Touch: []
     - Term: HUD/BOSS
       TermType: 0
       Description: 
@@ -244,6 +324,54 @@ MonoBehaviour:
       - 'Schauen Sie sich die
 
         beste Spieler an!'
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: DailySpin/TITLE
+      TermType: 0
+      Description: 
+      Languages:
+      - Daily Spin
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: DailySpin/CLICK_TO_SPIN
+      TermType: 0
+      Description: 
+      Languages:
+      - Upgrade your weapon!
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: DailySpin/CLICK_TO_STOP
+      TermType: 0
+      Description: 
+      Languages:
+      - Upgrade your weapon again!
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
+      - 
       Flags: 00000000000000000000
       Languages_Touch: []
     - Term: Ranking/ME
@@ -631,6 +759,60 @@ MonoBehaviour:
       Flags: 00000000000000000000
       Languages_Touch: []
     - Term: PopupQuitGame/MESSAGE
+      TermType: 0
+      Description: 
+      Languages:
+      - Do you want to keep playing?
+      - "Voltar \xE0 sele\xE7\xE3o de fases?\nVoc\xEA n\xE3o perder\xE1 seus cr\xE9ditos"
+      - "\uB2E8\uACC4 \uC120\uD0DD\uC73C\uB85C \uB3CC\uC544\uAC00\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?\r\n\uD06C\uB808\uB527\uC744
+        \uC783\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+      - "\xBFVolver a la selecci\xF3n de fases?\r\nNo perder\xE1s tus cr\xE9ditos"
+      - "\u56DE\u5230\u968E\u6BB5\u9078\u64C7\uFF1F\r\n\u4F60\u4E0D\u6703\u5931\u53BB\u4F60\u7684\u7A4D\u5206"
+      - "\u56DE\u5230\u9636\u6BB5\u9009\u62E9\uFF1F\r\n\u4F60\u4E0D\u4F1A\u5931\u53BB\u4F60\u7684\u79EF\u5206"
+      - "\u4F4D\u76F8\u9078\u629E\u306B\u623B\u308A\u307E\u3059\u304B?\r\n\u30AF\u30EC\u30B8\u30C3\u30C8\u3092\u5931\u3046\u3053\u3068\u306F\u3042\u308A\u307E\u305B\u3093"
+      - 'Tornare alla selezione delle fasi?
+
+        Non perderai i tuoi crediti
+        ...'
+      - 'Tornare alla selezione delle fasi?
+
+        Non perderai i tuoi crediti'
+      - "Zur\xFCck zur Phasenauswahl?\r\nSie verlieren Ihre Credits nicht"
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: PopupQuitApplication/CONTINUE
+      TermType: 0
+      Description: 
+      Languages:
+      - CONTINUE
+      - CONTINUAR
+      - "\uACC4\uC18D\uD55C\uB2E4"
+      - CONTINUAR
+      - "\u7E7C\u7E8C"
+      - "\u7EE7\u7EED"
+      - "\u7D9A\u304F"
+      - CONTINUER
+      - CONTINUA
+      - WEITERMACHEN
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: PopupQuitApplication/EXIT
+      TermType: 0
+      Description: 
+      Languages:
+      - EXIT
+      - SAIR
+      - "\uB098\uAC04\uB2E4"
+      - SALIR
+      - "\u51FA\u53E3"
+      - "\u51FA\u53E3"
+      - "\u51FA\u53E3"
+      - SORTIE
+      - USCITA
+      - AUSFAHRT
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: PopupQuitApplication/MESSAGE
       TermType: 0
       Description: 
       Languages:
@@ -1138,7 +1320,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby0kJA8MweYpiTuJVCPcma21gi2ZVGqAFU4NRWQkr4cQ81uy5c0rNud6wm2HQf3sLOX/exec
     Google_SpreadsheetKey: 1Lh8M9tCO10ggbPfV6AC48rMyIEbsFvxA8HDLOCgSgTk
     Google_SpreadsheetName: I2Loc Candy Kingdom Battle Localization
-    Google_LastUpdatedVersion: 1688496797128
+    Google_LastUpdatedVersion: 1699499499845
     Google_Password: Cen301241866
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a5f27a8b395eee418e3a02d7d5b7754, type: 3}
+  m_Name: Stages
+  m_EditorClassIdentifier: 
+  <Stages>k__BackingField:
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.1981132, g: 0.19808091, b: 0.1485849, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.16820933, g: 0.5660378, b: 0.49895296, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.7075472, g: 0.2770114, b: 0.6940178, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.3679245, g: 0.10586506, b: 0.10586506, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.30596048, g: 0.2507565, b: 0.3301887, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.38445893, g: 0.38679248, b: 0.07115523, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.4811321, g: 0.26236722, b: 0.12482201, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.41509432, g: 0.23300105, b: 0.23300105, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.07863118, g: 0.2924528, b: 0.23284474, a: 1}
+  - Label: 
+    Sprite: {fileID: 0}
+    FrameColor: {r: 0.4231217, g: 0.25663045, b: 0.745283, a: 1}

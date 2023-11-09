@@ -48,7 +48,7 @@ namespace Game
 
         public Vector3 GetPosition()
         {
-            return base.transform.position;
+            return this != null ? base.transform.position : Vector3.zero;
         }
 
         internal void SetRecoverStateActive(Action onComplete)

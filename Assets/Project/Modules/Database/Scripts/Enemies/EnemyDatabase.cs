@@ -1,7 +1,5 @@
-using Game;
 using System;
 using UnityEngine;
-using static UnityEngine.Rendering.DebugUI;
 
 namespace Database
 {

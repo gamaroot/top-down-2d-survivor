@@ -25,10 +25,14 @@ namespace Game
 
             Enemy enemy = pool.BorrowMeObjectFromPool<Enemy>();
             enemy.transform.position = point;
+            enemy.gameObject.SetActive(true);
 
             return enemy;
         }
 
-        internal static void DisableAll() => _pools.ForEach(pool => pool.DisableAll());
+        internal static void DisableAll()
+        {
+            _pools.ForEach(pool => pool.DisableAll());
+        }
     }
 }

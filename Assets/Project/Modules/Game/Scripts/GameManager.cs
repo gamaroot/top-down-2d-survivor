@@ -1,5 +1,6 @@
 using Database;
 using DG.Tweening;
+using ScreenNavigation;
 using UnityEngine;
 using Utils;
 
@@ -12,22 +13,19 @@ namespace Game
         [Header("Components")]
         [SerializeField] private HUD _hud;
         [SerializeField] private Player _player;
-        [SerializeField] private PopupManager _popupManager;
-        [SerializeField] private CoachMarkManager _coachMark;
         [SerializeField] private EnemyWaveController _waveController;
         [SerializeField] private MatchTimeHandler _matchTimeHandler;
 
+        private PopupManager _popupManager;
+        private CoachMarkManager _coachMark;
+
         private void Awake()
         {
-            DOTween.Init(this);
-            DOTween.SetTweensCapacity(500, 50);
+            var crossSceneReference = new CrossSceneReference();
+            this._popupManager = crossSceneReference.GetObjectByType<PopupManager>();
+            this._coachMark = crossSceneReference.GetObjectByType<CoachMarkManager>();
 
-            Application.targetFrameRate = 60;
-
-            Wallet.Load();
-            Reward.Load();
-            CameraHandler.Load();
-            Statistics.Load();
+            SceneNavigator.Instance.AddListenerOnScreenStateChange(this.OnSceneStateChange);
 
             this._player.Setup(this._itemDatabase.GetStatsValue(UpgradeType.MAX_HEALTH));
             this._player.OnDestroy = (_) => this.OnMatchEnd();
@@ -43,6 +41,9 @@ namespace Game
 
         private void Start()
         {
+            var data = (StageData)SceneNavigator.Instance.GetSceneParams(SceneID.GAME);
+            CameraHandler.Instance.MainCamera.DOColor(data.FrameColor, 2f);
+
             this.OnMatchStart();
         }
 
@@ -126,6 +127,17 @@ namespace Game
                !this._coachMark.NeedToShow(CoachMarkType.IMPROVE_YOUR_WEAPON_AGAIN))
             {
                 this._coachMark.Show(CoachMarkType.BUY_STRONGER_WEAPON);
+            }
+        }
+
+        private void OnSceneStateChange(SceneID sceneId, SceneState newState)
+        {
+            if (sceneId == SceneID.GAME && newState == SceneState.ANIMATING_HIDE)
+            {
+                SceneNavigator.Instance.RemoveListenerOnScreenStateChange(this.OnSceneStateChange);
+
+                CameraHandler.Instance.MainCamera.DOColor(Color.black, 2f);
+                this._waveController.ResetLevel();
             }
         }
     }

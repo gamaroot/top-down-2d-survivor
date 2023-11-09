@@ -26,6 +26,11 @@ namespace I2.Loc
 			public static string ME 		{ get{ return LocalizationManager.GetTranslation ("Ranking/ME"); } }
 		}
 
+		public static class ScreenStageSelection
+		{
+			public static string STAGE 		{ get{ return LocalizationManager.GetTranslation ("ScreenStageSelection/STAGE"); } }
+		}
+
 		public static class Toast
 		{
 			public static string CONNECTION_FAILED 		{ get{ return LocalizationManager.GetTranslation ("Toast/CONNECTION_FAILED"); } }
@@ -62,6 +67,11 @@ namespace I2.Loc
 		public static class Ranking
 		{
 		    public const string ME = "Ranking/ME";
+		}
+
+		public static class ScreenStageSelection
+		{
+		    public const string STAGE = "ScreenStageSelection/STAGE";
 		}
 
 		public static class Toast

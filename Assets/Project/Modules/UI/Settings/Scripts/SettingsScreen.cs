@@ -1,3 +1,4 @@
+using ScreenNavigation;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,8 +10,6 @@ namespace Game
         [SerializeField] private Animator _animator;
         [SerializeField] private Slider _sliderSoundVolume, _sliderMusicVolume;
         [SerializeField] private TextMeshProUGUI _textSoundVolume, _textMusicVolume, _textVersion;
-
-        [SerializeField] private RectTransform _panel;
 
         private void Start()
         {
@@ -24,12 +23,13 @@ namespace Game
             this._sliderMusicVolume.onValueChanged.AddListener(this.OnUpdateMusicVolume);
 
             this._textVersion.text = Application.version.ToString();
-        }
 
-        internal void ToggleVisibility()
-        {
-            bool visibility = !this._animator.GetBool(AnimationParams.VISIBLE);
-            this._animator.SetBool(AnimationParams.VISIBLE, visibility);
+            this._animator.SetBool(AnimationParams.VISIBLE, true);
+
+            SceneNavigator.Instance.ExecuteOnHideProcessStart((SceneID)base.gameObject.scene.buildIndex, () =>
+            {
+                this._animator.SetBool(AnimationParams.VISIBLE, false);
+            });
         }
 
         internal void OnPrivacyClick()
