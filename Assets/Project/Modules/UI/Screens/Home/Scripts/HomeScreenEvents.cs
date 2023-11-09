@@ -24,6 +24,10 @@ namespace Game
         // Called through inspector
         public void OnPlayButtonClick()
         {
+            if (SceneNavigator.Instance.IsSceneOpened(SceneID.GENERAL_SETTINGS))
+            {
+                SceneNavigator.Instance.UnloadSceneAsync(SceneID.GENERAL_SETTINGS);
+            }
             SceneNavigator.Instance.UnloadSceneAsync(SceneID.HOME);
             SceneNavigator.Instance.LoadAdditiveSceneAsync(SceneID.STAGE_SELECTION);
         }

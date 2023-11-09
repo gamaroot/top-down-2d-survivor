@@ -34,7 +34,7 @@ namespace ScreenNavigation
 
         public bool IsThereOpenedScreen => !this.GetScreenContext(x => x.ScreenState == SceneState.LOADED || 
                                                                        x.ScreenState == SceneState.LOADING).IsEmpty;
-        public bool IsScreenOpened(SceneID sceneID)
+        public bool IsSceneOpened(SceneID sceneID)
         {
             SceneState state = this.GetScreenContext(x => x.ID == sceneID).ScreenState;
             return state == SceneState.LOADED || state == SceneState.LOADING;

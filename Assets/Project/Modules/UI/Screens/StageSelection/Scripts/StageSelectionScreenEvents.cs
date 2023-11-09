@@ -32,5 +32,16 @@ namespace Game
                 item.transform.SetParent(this._scrolllistContainer);
             }
         }
+
+        private void Update()
+        {
+#if UNITY_EDITOR || UNITY_WEBGL || UNITY_ANDROID
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneNavigator.Instance.UnloadSceneAsync(SceneID.STAGE_SELECTION);
+                SceneNavigator.Instance.LoadAdditiveSceneAsync(SceneID.HOME);
+            }
+#endif
+        }
     }
 }
