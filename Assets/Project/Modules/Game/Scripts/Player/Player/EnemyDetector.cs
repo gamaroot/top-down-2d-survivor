@@ -11,7 +11,23 @@ namespace Game
 
         public Transform FindClosestTarget()
         {
-            return this._targets.Count > 0 ? this._targets[0] : null;
+            lock (this._lock)
+            {
+                Transform target = null;
+
+                if (this._targets.Count > 0)
+                {
+                    target = this._targets[0];
+
+                    if (target != null && !target.GetComponent<Enemy>().isActiveAndEnabled)
+                    {
+                        this._targets.RemoveAt(0);
+                        target = null;
+                    }
+                }
+
+                return target;
+            }
         }
 
         private void OnTriggerEnter2D(Collider2D collider)

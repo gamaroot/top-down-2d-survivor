@@ -37,6 +37,15 @@ namespace Game
             }
         }
 
+        internal static void DisableAll()
+        {
+            for (int index = 0; index < _bulletPools.Length; index++)
+            {
+                Pool bulletPool = _bulletPools[index];
+                bulletPool.DisableAll();
+            }
+        }
+
         internal static Transform SpawnBullet(int id, Vector2 spawnPoint)
         {
             Pool bulletPool = _bulletPools[id];

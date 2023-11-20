@@ -15,6 +15,7 @@ namespace Game
         [SerializeField] private Player _player;
         [SerializeField] private EnemyWaveController _waveController;
         [SerializeField] private MatchTimeHandler _matchTimeHandler;
+        [SerializeField] private StageHandler _stageHandler;
 
         private PopupManager _popupManager;
         private CoachMarkManager _coachMark;
@@ -34,7 +35,7 @@ namespace Game
             this._matchTimeHandler.OnUpdate = this._hud.UpdateRemainingTime;
 
             this._waveController.StateUpdateListener = this._hud.UpdateWave;
-            this._waveController.OnKillListener = Reward.Instance.OnEnemyDefeat;
+            this._waveController.OnKillListener = this.OnEnemyKilled;
 
             this.SetupCoachMarks();
         }
@@ -42,7 +43,11 @@ namespace Game
         private void Start()
         {
             var data = (StageData)SceneNavigator.Instance.GetSceneParams(SceneID.GAME);
-            CameraHandler.Instance.MainCamera.DOColor(data.FrameColor, 2f);
+            Statistics.Instance.CurrentWave = data.Level;
+
+            data.PlayerInfo = this._player;
+
+            this._stageHandler.Setup(data);
 
             this.OnMatchStart();
         }
@@ -138,6 +143,19 @@ namespace Game
 
                 CameraHandler.Instance.MainCamera.DOColor(Color.black, 2f);
                 this._waveController.ResetLevel();
+                BulletPool.DisableAll();
+            }
+        }
+
+        private void OnEnemyKilled(bool isBoss, DamagerObjectType killedBy)
+        {
+            Reward.Instance.OnEnemyDefeat(isBoss, killedBy);
+            if (isBoss)
+            {
+                if (killedBy == DamagerObjectType.Bullet)
+                {
+                    Statistics.Instance.IncrementWave();
+                }
             }
         }
     }

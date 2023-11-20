@@ -10,7 +10,7 @@ namespace Game
         internal float TotalMatches { get; private set; }
         internal float TotalEnemiesDestroyed { get; private set; }
         internal int HighestWave { get; private set; }
-        internal int CurrentWave { get; private set; }
+        internal int CurrentWave;
 
         internal Action<int> OnHighestWaveChange;
 

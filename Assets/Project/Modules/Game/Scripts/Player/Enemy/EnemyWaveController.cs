@@ -71,10 +71,6 @@ namespace Game
                 this.OnKillListener.Invoke(isBoss, killedBy);
                 if (isBoss)
                 {
-                    if (killedBy == DamagerObjectType.Bullet)
-                        Statistics.Instance.IncrementWave();
-
-                    this.OnSpawnStart();
                     return;
                 }
 
@@ -194,8 +190,15 @@ namespace Game
             }
         }
 
-        private int GetEnemyType() => Statistics.Instance.CurrentWave < this._totalEnemyTypes
-                                        ? Statistics.Instance.CurrentWave
-                                        : this.PickRandomElement(this._spawnProbabilities, this._spawnProbabilitiesSum);
+        private int GetEnemyType()
+        {
+            if (Statistics.Instance.CurrentWave < this._totalEnemyTypes)
+            {
+                return Statistics.Instance.CurrentWave;
+            }
+            else {
+                return this.PickRandomElement(this._spawnProbabilities, this._spawnProbabilitiesSum);
+            }
+        }
     }
 }

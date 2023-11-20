@@ -18,6 +18,9 @@ namespace Game
 
             var weaponData = data as WeaponData;
 
+#if DEBUG_MODE
+            this.RemoveLocker();
+#else
             if (Statistics.Instance.HighestWave >= weaponData.UnlockLevel)
             {
                 this.RemoveLocker();
@@ -37,6 +40,7 @@ namespace Game
                     }
                 }
             }
+#endif
         }
 
         private void RemoveLocker()

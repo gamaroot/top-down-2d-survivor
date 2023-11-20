@@ -14,32 +14,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Stages>k__BackingField:
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.1981132, g: 0.19808091, b: 0.1485849, a: 1}
+    Sprite: {fileID: 21300000, guid: 030d507fa77228b4daf1903c69638f64, type: 3}
+    FrameColor: {r: 0.4, g: 0.134375, b: 0.078125, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.16820933, g: 0.5660378, b: 0.49895296, a: 1}
+    Sprite: {fileID: 21300000, guid: e3078371347337b418700465981533e2, type: 3}
+    FrameColor: {r: 0.08, g: 0.4, b: 0.13647057, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.7075472, g: 0.2770114, b: 0.6940178, a: 1}
+    Sprite: {fileID: 21300000, guid: 003d567c3c1d67b46b4eb948c6af9576, type: 3}
+    FrameColor: {r: 0.08, g: 0.16, b: 0.4, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.3679245, g: 0.10586506, b: 0.10586506, a: 1}
+    Sprite: {fileID: 21300000, guid: f529212cbcf35ef43b690f2aa1ddfb90, type: 3}
+    FrameColor: {r: 0.4, g: 0.08, b: 0.252549, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.30596048, g: 0.2507565, b: 0.3301887, a: 1}
+    Sprite: {fileID: 21300000, guid: 2f390044da3ad2b4a9c01b5204444020, type: 3}
+    FrameColor: {r: 0.25254902, g: 0.4, b: 0.08, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.38445893, g: 0.38679248, b: 0.07115523, a: 1}
+    Sprite: {fileID: 21300000, guid: 705ec5988b5652149b8c8fc3d79835de, type: 3}
+    FrameColor: {r: 0.4, g: 0.08, b: 0.16, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.4811321, g: 0.26236722, b: 0.12482201, a: 1}
+    Sprite: {fileID: 21300000, guid: d3f329593ea9ae84988a353c55d9c68d, type: 3}
+    FrameColor: {r: 0.08, g: 0.25254905, b: 0.4, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.41509432, g: 0.23300105, b: 0.23300105, a: 1}
+    Sprite: {fileID: 21300000, guid: f7a645a41c7fa3d4fae89b5af7d0d5ff, type: 3}
+    FrameColor: {r: 0.4, g: 0.32, b: 0.08, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.07863118, g: 0.2924528, b: 0.23284474, a: 1}
+    Sprite: {fileID: 21300000, guid: 4b2a74f361a5e6949b51400606378478, type: 3}
+    FrameColor: {r: 0.08, g: 0.4, b: 0.32, a: 1}
   - Label: 
-    Sprite: {fileID: 0}
-    FrameColor: {r: 0.4231217, g: 0.25663045, b: 0.745283, a: 1}
+    Sprite: {fileID: 21300000, guid: bd718275c294a664b952b7ff06b3a8db, type: 3}
+    FrameColor: {r: 0.32, g: 0.08, b: 0.4, a: 1}
+  - Label: 
+    Sprite: {fileID: 21300000, guid: 159dc7e57f70a0348a36e33ca4c47b88, type: 3}
+    FrameColor: {r: 0.4, g: 0.16, b: 0.08, a: 1}
+  - Label: 
+    Sprite: {fileID: 21300000, guid: a748b4ceb5bde014d9e3fcbf9c8f04fd, type: 3}
+    FrameColor: {r: 0.08, g: 0.4, b: 0.16, a: 1}
+  - Label: 
+    Sprite: {fileID: 21300000, guid: 7d90b5fc44ee4d543a6c6d1c016040a6, type: 3}
+    FrameColor: {r: 0.16, g: 0.08, b: 0.4, a: 1}
+  - Label: 
+    Sprite: {fileID: 21300000, guid: f1c7c0ecd750cb64bbb20175d7df790f, type: 3}
+    FrameColor: {r: 0.4, g: 0.24, b: 0.08, a: 1}
+  - Label: 
+    Sprite: {fileID: 21300000, guid: fe547a44e857a2649b879593b8974fbc, type: 3}
+    FrameColor: {r: 0.08, g: 0.4, b: 0.24, a: 1}
+  - Label: 
+    Sprite: {fileID: 21300000, guid: 5b433b243d471e44f89960c5f6c8857e, type: 3}
+    FrameColor: {r: 0.24, g: 0.08, b: 0.4, a: 1}

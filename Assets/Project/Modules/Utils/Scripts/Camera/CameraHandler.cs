@@ -16,7 +16,10 @@ namespace Utils
             Instance.CameraBounds = Instance.GetCameraBounds();
         }
 
-        internal Vector2 GetCameraSize() => 2f * this.MainCamera.orthographicSize * new Vector2(this.MainCamera.aspect, 1f);
+        internal Vector2 GetCameraSize()
+        {
+            return 2f * this.MainCamera.orthographicSize * new Vector2(this.MainCamera.aspect, 1f);
+        }
 
         private CameraBounds GetCameraBounds()
         {
