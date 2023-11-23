@@ -4,14 +4,17 @@ using UnityEngine.Events;
 
 namespace Game
 {
-    internal class CoachMarkManager : MonoBehaviour
+    public class CoachMarkManager : MonoBehaviour
     {
         [SerializeField] private Transform _container;
         [SerializeField] private CoachMarkInfo[] _coachMarks;
 
         [SerializeField] private UnityAction _onScrollStatsPanelToTop,
                                              _onScrollWeaponsPanelToTop;
-        private void Awake() => this.CheckItCanBeDisabled();
+        private void Awake()
+        {
+            this.CheckItCanBeDisabled();
+        }
 
         internal void Show(CoachMarkType type)
         {
@@ -58,7 +61,10 @@ namespace Game
             return false;
         }
 
-        private string GetKey(CoachMarkType type) => $"HAS_COACH_MARK_SHOWN_{type}";
+        private string GetKey(CoachMarkType type)
+        {
+            return $"HAS_COACH_MARK_SHOWN_{type}";
+        }
 
         private void CheckItCanBeDisabled()
         {

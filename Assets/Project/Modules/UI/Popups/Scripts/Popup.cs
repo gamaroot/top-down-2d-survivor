@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 namespace Game
 {
@@ -10,9 +11,10 @@ namespace Game
         [field: SerializeField] internal Animator Animator { get; private set; }
 
         [SerializeField] private bool _dimissable;
-        [SerializeField] private TextMeshProUGUI _textTitle, _textMessage;
+        [SerializeField] private Button _buttonConfirm, _buttonDeny;
+        [SerializeField] private TextMeshProUGUI _textTitle, _textMessage, _textButtonDeny, _textButtonConfirm;
 
-        internal UnityAction OnShowListener, OnHideListener;
+        [field: SerializeField] internal UnityAction OnShowListener, OnHideListener;
 
         internal static bool IsOpen { get; private set; }
 
@@ -47,16 +49,45 @@ namespace Game
             set { this._textMessage.text = value; }
         }
 
-        public void Show()
+        internal string ButtonDenyText
+        {
+            get { return this._textButtonDeny.text; }
+            set { this._textButtonDeny.text = value; }
+        }
+
+        internal string ButtonConfirmText
+        {
+            get { return this._textButtonConfirm.text; }
+            set { this._textButtonConfirm.text = value; }
+        }
+
+        public Popup Show()
         {
             IsOpen = true;
             base.gameObject.SetActive(true);
+
+            return this;
         }
 
         public void Hide()
         {
+            this._buttonDeny?.onClick.RemoveAllListeners();
+            this._buttonConfirm?.onClick.RemoveAllListeners();
+
             IsOpen = false;
             this.Animator.SetBool(AnimationParams.VISIBLE, false);
+        }
+
+        public Popup AddConfirmButtonClick(UnityAction onClick)
+        {
+            this._buttonConfirm.onClick.AddListener(onClick);
+            return this;
+        }
+
+        public Popup AddDenyButtonClick(UnityAction onClick)
+        {
+            this._buttonDeny.onClick.AddListener(onClick);
+            return this;
         }
 
         private void OnDialogShow()

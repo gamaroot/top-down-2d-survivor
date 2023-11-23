@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4baeda8f023a8044b1eff0f67d9d93e, type: 3}
-  m_Name: Upgrade Items
+  m_Name: Items
   m_EditorClassIdentifier: 
   Weapons:
   - ID: 0

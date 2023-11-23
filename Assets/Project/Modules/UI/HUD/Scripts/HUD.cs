@@ -14,7 +14,7 @@ namespace Game
 
         [SerializeField] private UpgradeItemDatabase _database;
 
-        [SerializeField] private TextMeshProUGUI _textRemainingTime, _textTotalCoins, _textDPS, _textHealthBar;
+        [SerializeField] private TextMeshProUGUI _stageLabel, _textRemainingTime, _textTotalCoins, _textDPS, _textHealthBar;
 
         [SerializeField] private Slider _sliderLevelBar, _sliderHealthBar;
 
@@ -42,14 +42,20 @@ namespace Game
             };
         }
 
+        public void SetStage(int stage)
+        {
+            this._stageLabel.text = string.Format(ScriptLocalization.HUD.STAGE, stage);
+        }
+
         internal void UpdateRemainingTime(float remainingTime)
         {
             this._textRemainingTime.text = remainingTime.ToTimeNotation();
         }
 
-        internal void OnReset()
+        internal void DisplayRecoveringState()
         {
             this._sliderLevelBar.value = 0;
+            this._textRemainingTime.text = ScriptLocalization.HUD.RECOVERING_STATE;
         }
 
         internal void UpdateWave(EnemyWaveState state)

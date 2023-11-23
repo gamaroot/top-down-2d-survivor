@@ -8,6 +8,8 @@ namespace I2.Loc
 		public static class HUD
 		{
 			public static string HEALTH_DISPLAY 		{ get{ return LocalizationManager.GetTranslation ("HUD/HEALTH_DISPLAY"); } }
+			public static string RECOVERING_STATE 		{ get{ return LocalizationManager.GetTranslation ("HUD/RECOVERING_STATE"); } }
+			public static string STAGE 		{ get{ return LocalizationManager.GetTranslation ("HUD/STAGE"); } }
 		}
 
 		public static class PopupGameRating
@@ -19,6 +21,11 @@ namespace I2.Loc
 		{
 			public static string MESSAGE 		{ get{ return LocalizationManager.GetTranslation ("PopupMoreCoins/MESSAGE"); } }
 			public static string TITLE 		{ get{ return LocalizationManager.GetTranslation ("PopupMoreCoins/TITLE"); } }
+		}
+
+		public static class PopupStageCleared
+		{
+			public static string STAGE 		{ get{ return LocalizationManager.GetTranslation ("PopupStageCleared/STAGE"); } }
 		}
 
 		public static class Ranking
@@ -51,6 +58,8 @@ namespace I2.Loc
 		public static class HUD
 		{
 		    public const string HEALTH_DISPLAY = "HUD/HEALTH_DISPLAY";
+		    public const string RECOVERING_STATE = "HUD/RECOVERING_STATE";
+		    public const string STAGE = "HUD/STAGE";
 		}
 
 		public static class PopupGameRating
@@ -62,6 +71,11 @@ namespace I2.Loc
 		{
 		    public const string MESSAGE = "PopupMoreCoins/MESSAGE";
 		    public const string TITLE = "PopupMoreCoins/TITLE";
+		}
+
+		public static class PopupStageCleared
+		{
+		    public const string STAGE = "PopupStageCleared/STAGE";
 		}
 
 		public static class Ranking

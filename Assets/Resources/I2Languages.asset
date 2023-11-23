@@ -203,20 +203,36 @@ MonoBehaviour:
       - "\u2665 {0}/{1}"
       Flags: 00000000000000000000
       Languages_Touch: []
+    - Term: HUD/RECOVERING_STATE
+      TermType: 0
+      Description: 
+      Languages:
+      - RECOVERING
+      - RECUPERANDO
+      - "\uBCF5\uAD6C"
+      - RECUPERANDO
+      - "\u6062\u5FA9"
+      - "\u6062\u590D"
+      - "\u56DE\u5FA9"
+      - "R\xC9CUP\xC9RATION"
+      - RECUPERO
+      - GENESEND
+      Flags: 00000000000000000000
+      Languages_Touch: []
     - Term: HUD/STAGE
       TermType: 0
       Description: 
       Languages:
-      - Stage
-      - Fase
-      - Stage
-      - Fase
-      - "\u968E\u6BB5"
-      - "\u9636\u6BB5"
-      - "\u30B9\u30C6\u30FC\u30B8"
-      - Stage
-      - Fase
-      - "B\xFChne"
+      - STAGE {0}
+      - FASE {0}
+      - STAGE {0}
+      - FASE {0}
+      - "\u63EE\u624B {0}"
+      - "\u6325\u624B {0}"
+      - "\u30A6\u30A7\u30FC\u30D6 {0}"
+      - STAGE {0}
+      - FASE {0}
+      - Stufe {0}
       Flags: 00000000000000000000
       Languages_Touch: []
     - Term: FTUE/DESTROY_ENEMIES
@@ -816,7 +832,7 @@ MonoBehaviour:
       TermType: 0
       Description: 
       Languages:
-      - Do you want to keep playing?
+      - Do you want to keep playing? 1234
       - Deseja continuar jogando?
       - "\uACC4\uC18D \uD50C\uB808\uC774 \uD560 \uAC74\uAC00\uC694?"
       - "\xBFQuieres seguir jugando?"
@@ -1035,6 +1051,54 @@ MonoBehaviour:
       - "APPR\xC9CIER CE JEU?"
       - TI PIACE QUESTO GIOCO?
       - GENIESST DU DIESES SPIEL?
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: PopupStageCleared/REPLAY
+      TermType: 0
+      Description: 
+      Languages:
+      - REPLAY
+      - REJOGAR
+      - "\uC7AC\uC0DD"
+      - REJUGAR
+      - "\u91CD\u64AD"
+      - "\u91CD\u64AD"
+      - "\u518D\u6F14"
+      - REJOUER
+      - REPLAY
+      - WIEDERHOLUNGSSPIEL
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: PopupStageCleared/MESSAGE
+      TermType: 0
+      Description: 
+      Languages:
+      - VICTORY!
+      - "VIT\xD3RIA!"
+      - "\uC2B9\uB9AC!"
+      - "\xA1VICTORIA!"
+      - "\u52DD\u5229\uFF01"
+      - "\u80DC\u5229\uFF01"
+      - "\u52DD\u5229\uFF01"
+      - VICTOIRE!
+      - VITTORIA!
+      - SIEG!
+      Flags: 00000000000000000000
+      Languages_Touch: []
+    - Term: PopupStageCleared/STAGE
+      TermType: 0
+      Description: 
+      Languages:
+      - STAGE {0}
+      - FASE {0}
+      - STAGE {0}
+      - FASE {0}
+      - "\u63EE\u624B {0}"
+      - "\u6325\u624B {0}"
+      - "\u30A6\u30A7\u30FC\u30D6 {0}"
+      - STAGE {0}
+      - FASE {0}
+      - Stufe {0}
       Flags: 00000000000000000000
       Languages_Touch: []
     - Term: Offer/BUTTON_DOUBLE_POWER
@@ -1320,7 +1384,7 @@ MonoBehaviour:
     Google_WebServiceURL: https://script.google.com/macros/s/AKfycby0kJA8MweYpiTuJVCPcma21gi2ZVGqAFU4NRWQkr4cQ81uy5c0rNud6wm2HQf3sLOX/exec
     Google_SpreadsheetKey: 1Lh8M9tCO10ggbPfV6AC48rMyIEbsFvxA8HDLOCgSgTk
     Google_SpreadsheetName: I2Loc Candy Kingdom Battle Localization
-    Google_LastUpdatedVersion: 1699499499845
+    Google_LastUpdatedVersion: 1700737517245
     Google_Password: Cen301241866
     GoogleUpdateFrequency: 1
     GoogleInEditorCheckFrequency: 1

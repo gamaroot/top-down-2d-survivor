@@ -1,7 +1,9 @@
 using Database;
 using DG.Tweening;
 using ScreenNavigation;
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using Utils;
 
 namespace Game
@@ -17,27 +19,25 @@ namespace Game
         [SerializeField] private MatchTimeHandler _matchTimeHandler;
         [SerializeField] private StageHandler _stageHandler;
 
+        [Header("Events")]
+        [SerializeField] private OnPlayerLoseEvent _onPlayerLose;
+
         private PopupManager _popupManager;
-        private CoachMarkManager _coachMark;
 
         private void Awake()
         {
-            var crossSceneReference = new CrossSceneReference();
-            this._popupManager = crossSceneReference.GetObjectByType<PopupManager>();
-            this._coachMark = crossSceneReference.GetObjectByType<CoachMarkManager>();
+            this._popupManager = new CrossSceneReference().GetObjectByType<PopupManager>();
 
             SceneNavigator.Instance.AddListenerOnScreenStateChange(this.OnSceneStateChange);
 
             this._player.Setup(this._itemDatabase.GetStatsValue(UpgradeType.MAX_HEALTH));
-            this._player.OnDestroy = (_) => this.OnMatchEnd();
+            this._player.OnDestroy = (_) => this.OnPlayerLose();
 
-            this._matchTimeHandler.OnTimeout = this.OnMatchEnd;
+            this._matchTimeHandler.OnTimeout = this.OnPlayerLose;
             this._matchTimeHandler.OnUpdate = this._hud.UpdateRemainingTime;
 
             this._waveController.StateUpdateListener = this._hud.UpdateWave;
             this._waveController.OnKillListener = this.OnEnemyKilled;
-
-            this.SetupCoachMarks();
         }
 
         private void Start()
@@ -62,76 +62,43 @@ namespace Game
 
         private void OnMatchStart()
         {
+            this._hud.SetStage(++Statistics.Instance.CurrentWave);
             this._matchTimeHandler.ResetTimer();
             this._waveController.StartSpawn();
         }
 
-        private void OnMatchEnd()
+        private void OnPlayerWin()
+        {
+            this._waveController.ResetLevel();
+            Statistics.Instance.ResetCurrentWave();
+
+            if (PopupGameRating.NeedToShow())
+                this._popupManager.ShowGameRating().OnHideListener = this.ShowStageClearedPopup;
+            else
+                this.ShowStageClearedPopup();
+        }
+
+        private void OnPlayerLose()
         {
             this._waveController.ResetLevel();
 
             Statistics.Instance.IncrementMatches();
             Statistics.Instance.ResetCurrentWave();
 
-            this._hud.OnReset();
+            this._matchTimeHandler.StopTimer();
+            this._hud.DisplayRecoveringState();
+
+            this._onPlayerLose.Invoke();
 
             this._player.SetRecoverStateActive(this.OnMatchStart);
-
-            if (PopupGameRating.NeedToShow())
-                this._popupManager.ShowGameRating();
-            else
-                this.CheckCoachMarks();
         }
 
-        private void SetupCoachMarks()
+        private void OnEnemyKilled(bool isBoss, DamagerObjectType killedBy)
         {
-            var coachMarks = new CoachMarkType[]
+            Reward.Instance.OnEnemyDefeat(isBoss, killedBy);
+            if (isBoss && killedBy == DamagerObjectType.Bullet)
             {
-                CoachMarkType.DESTROY_ENEMIES,
-                CoachMarkType.IMPROVE_YOUR_WEAPON,
-                CoachMarkType.IMPROVE_YOUR_WEAPON_AGAIN
-            };
-            if (this._itemDatabase.GetDPS() >= 15)
-            {
-                this._coachMark.SetAsShown(coachMarks);
-            }
-            else if (this._coachMark.NeedToShow(coachMarks))
-            {
-                Wallet.Instance.OnChange += this.CheckCoachMarkWhenGetCoins;
-            }
-        }
-
-        private void CheckCoachMarkWhenGetCoins(float _, float currCoins)
-        {
-            if (!this._coachMark.isActiveAndEnabled)
-                return;
-
-            if (currCoins >= 3 &&
-                this._coachMark.NeedToShow(CoachMarkType.DESTROY_ENEMIES))
-            {
-                this._coachMark.Show(CoachMarkType.DESTROY_ENEMIES);
-            }
-            else if(currCoins >= 10 &&
-                    this._coachMark.NeedToShow(CoachMarkType.IMPROVE_YOUR_WEAPON))
-            {
-                this._coachMark.Show(CoachMarkType.IMPROVE_YOUR_WEAPON);
-            }
-            else if (currCoins >= 22 &&
-                     this._coachMark.NeedToShow(CoachMarkType.IMPROVE_YOUR_WEAPON_AGAIN))
-            {
-                this._coachMark.Show(CoachMarkType.IMPROVE_YOUR_WEAPON_AGAIN);
-                Wallet.Instance.OnChange -= this.CheckCoachMarkWhenGetCoins;
-            }
-        }
-
-        private void CheckCoachMarks()
-        {
-            if (this._itemDatabase.GetDPS() <= 15 &&
-                this._coachMark.NeedToShow(CoachMarkType.BUY_STRONGER_WEAPON) &&
-               !this._coachMark.NeedToShow(CoachMarkType.IMPROVE_YOUR_WEAPON) &&
-               !this._coachMark.NeedToShow(CoachMarkType.IMPROVE_YOUR_WEAPON_AGAIN))
-            {
-                this._coachMark.Show(CoachMarkType.BUY_STRONGER_WEAPON);
+                this.OnPlayerWin();
             }
         }
 
@@ -147,16 +114,21 @@ namespace Game
             }
         }
 
-        private void OnEnemyKilled(bool isBoss, DamagerObjectType killedBy)
+        private void ShowStageClearedPopup()
         {
-            Reward.Instance.OnEnemyDefeat(isBoss, killedBy);
-            if (isBoss)
+            this._popupManager.ShowStageCleared()
+            .AddConfirmButtonClick(() =>
             {
-                if (killedBy == DamagerObjectType.Bullet)
-                {
-                    Statistics.Instance.IncrementWave();
-                }
-            }
+                Statistics.Instance.IncrementWave();
+                this.OnMatchStart();
+            })
+            .AddDenyButtonClick(this.OnMatchStart);
         }
+
+
+        #region Event Listeners
+        [Serializable]
+        public class OnPlayerLoseEvent : UnityEvent { }
+        #endregion
     }
 }
