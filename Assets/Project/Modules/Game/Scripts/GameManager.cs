@@ -36,6 +36,7 @@ namespace Game
             this._matchTimeHandler.OnTimeout = this.OnPlayerLose;
             this._matchTimeHandler.OnUpdate = this._hud.UpdateRemainingTime;
 
+            this._waveController.Setup(this._player);
             this._waveController.StateUpdateListener = this._hud.UpdateWave;
             this._waveController.OnKillListener = this.OnEnemyKilled;
         }

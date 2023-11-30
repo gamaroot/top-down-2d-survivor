@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Game
 {
     [RequireComponent(typeof(Collider2D), typeof(Rigidbody2D))]
-    public class Body : DamagerObject
+    public class Body : DamagerObject, IBody
     {
         [field: SerializeField] internal Rigidbody2D Rigidbody { get; private set; }
 
@@ -37,6 +37,16 @@ namespace Game
 
         internal Action<DamagerObjectType> OnDestroy { private get; set; }
         internal Action<float, float> OnHealthUpdated = (_,_) => { };
+
+        public Vector3 GetPosition()
+        {
+            return this != null ? base.transform.position : Vector3.zero;
+        }
+
+        public bool IsAlive()
+        {
+            return base.gameObject.activeSelf;
+        }
 
         private void OnValidate()
         {

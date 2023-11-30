@@ -11,6 +11,6 @@ namespace Database
         public string Label;
         public Sprite Sprite;
         public Color FrameColor;
-        public IPlayerInfo PlayerInfo;
+        public IBody PlayerInfo;
     }
 }

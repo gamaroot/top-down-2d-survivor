@@ -22,8 +22,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - App update cancelled
-      - "Atualiza\xE7\xE3o cancelada"
       - "\uCDE8\uC18C \uCDE8\uC18C"
+      - "Atualiza\xE7\xE3o cancelada"
       - "Actualizaci\xF3n cancelada"
       - "\u66F4\u65B0\u5DF2\u53D6\u6D88"
       - "\u66F4\u65B0\u5DF2\u53D6\u6D88"
@@ -38,10 +38,10 @@ MonoBehaviour:
       Description: 
       Languages:
       - Update failed. Next attempt will be made after restarting the app.
-      - "Falha na atualiza\xE7\xE3o. Pr\xF3xima tentativa ser\xE1 feita ap\xF3s reiniciar
-        o app."
       - "\uC5C5\uB370\uC774\uD2B8\uAC00 \uC2E4\uD328. \uB2E4\uC74C \uC2DC\uB3C4\uB294
         \uC571\uC744 \uB2E4\uC2DC \uC2DC\uC791\uD55C \uD6C4 \uC774\uB8E8\uC5B4\uC9D1\uB2C8\uB2E4."
+      - "Falha na atualiza\xE7\xE3o. Pr\xF3xima tentativa ser\xE1 feita ap\xF3s reiniciar
+        o app."
       - "Actualizaci\xF3n fallida. El pr\xF3ximo intento se realizar\xE1 despu\xE9s
         de reiniciar la aplicaci\xF3n."
       - "\u66F4\u65B0\u5931\u6557\u3002\u4E0B\u6B21\u5617\u8A66\u5C07\u5728\u91CD\u65B0\u555F\u52D5\u61C9\u7528\u7A0B\u5E8F\u5F8C\u9032\u884C\u3002"
@@ -60,9 +60,9 @@ MonoBehaviour:
       Description: 
       Languages:
       - Connection failed. Please, check your Internet and try again.
-      - "Falha na conex\xE3o. Por favor, verifique sua Internet e tente novamente."
       - "\uC5F0\uACB0\uC5D0 \uC2E4\uD328. \uC778\uD130\uB137\uC744 \uD655\uC778\uD558\uACE0
         \uB2E4\uC2DC \uC2DC\uB3C4\uD558\uC2ED\uC2DC\uC624."
+      - "Falha na conex\xE3o. Por favor, verifique sua Internet e tente novamente."
       - "Error de conexi\xF3n. Por favor, revisa tu Internet y vuelve a intentarlo."
       - "\u9023\u63A5\u5931\u6557\u3002\u8ACB\u6AA2\u67E5\u60A8\u7684\u4E92\u806F\u7DB2\uFF0C\u7136\u5F8C\u91CD\u8A66\u3002"
       - "\u8FDE\u63A5\u5931\u8D25\u3002\u8BF7\u68C0\u67E5\u60A8\u7684\u4E92\u8054\u7F51\uFF0C\u7136\u540E\u91CD\u8BD5\u3002"
@@ -96,8 +96,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Play
-      - Jogar
       - "\uB180\uB2E4"
+      - Jogar
       - Jugar
       - "\u73A9"
       - "\u73A9"
@@ -112,8 +112,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Options
-      - "Op\xE7\xF5es"
       - "\uC635\uC158"
+      - "Op\xE7\xF5es"
       - Opciones
       - "\u9078\u9805"
       - "\u9009\u9879"
@@ -128,8 +128,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Stage Selection
-      - "Sele\xE7\xE3o de Fase"
       - "\uC2A4\uD14C\uC774\uC9C0 \uC120\uD0DD"
+      - "Sele\xE7\xE3o de Fase"
       - "Selecci\xF3n de Fase"
       - "\u821E\u81FA\u9078\u64C7"
       - "\u821E\u53F0\u9009\u62E9"
@@ -144,8 +144,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Stage
-      - Fase
       - Stage
+      - Fase
       - Fase
       - "\u968E\u6BB5"
       - "\u9636\u6BB5"
@@ -160,8 +160,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - BOSS
-      - BOSS
       - "\uBCF4\uC2A4"
+      - BOSS
       - BOSS
       - "\u8001\u95C6"
       - "\u8001\u677F"
@@ -208,8 +208,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - RECOVERING
-      - RECUPERANDO
       - "\uBCF5\uAD6C"
+      - RECUPERANDO
       - RECUPERANDO
       - "\u6062\u5FA9"
       - "\u6062\u590D"
@@ -224,8 +224,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - STAGE {0}
-      - FASE {0}
       - STAGE {0}
+      - FASE {0}
       - FASE {0}
       - "\u63EE\u624B {0}"
       - "\u6325\u624B {0}"
@@ -242,8 +242,8 @@ MonoBehaviour:
       - 'Destroy enemies and
 
         get credits!'
-      - "Destrua inimigos e\nganhe cr\xE9ditos!"
       - "\uC801\uC744 \uD30C\uAD34\uD558\uACE0 \uD06C\uB808\uB527\uC744 \uBC1B\uC73C\uC138\uC694!"
+      - "Destrua inimigos e\nganhe cr\xE9ditos!"
       - "\xA1Destruye enemigos y\nobt\xE9n cr\xE9ditos!"
       - "\u6D88\u6EC5\u6575\u4EBA\u4E26\u7372\u5F97\u7A4D\u5206\uFF01"
       - "\u6D88\u706D\u654C\u4EBA\u5E76\u83B7\u5F97\u79EF\u5206\uFF01"
@@ -260,8 +260,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Upgrade your weapon!
-      - Melhore sua arma!
       - "\uBB34\uAE30\uB97C \uD5A5\uC0C1\uC2DC\uD0A4\uC138\uC694!"
+      - Melhore sua arma!
       - "\xA1Mejora tu arma!"
       - "\u6539\u9032\u4F60\u7684\u6B66\u5668\uFF01"
       - "\u6539\u8FDB\u4F60\u7684\u6B66\u5668\uFF01"
@@ -276,8 +276,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Upgrade your weapon again!
-      - Melhore sua arma ainda mais!
       - "\uBB34\uAE30\uB97C \uB354\uC6B1 \uD5A5\uC0C1\uC2DC\uD0A4\uC138\uC694!"
+      - Melhore sua arma ainda mais!
       - "\xA1Mejora tu arma a\xFAn m\xE1s!"
       - "\u9032\u4E00\u6B65\u6539\u9032\u4F60\u7684\u6B66\u5668\uFF01"
       - "\u8FDB\u4E00\u6B65\u6539\u8FDB\u4F60\u7684\u6B66\u5668\uFF01"
@@ -294,9 +294,9 @@ MonoBehaviour:
       - 'Save credits and
 
         buy a stronger weapon!'
-      - "Economize cr\xE9ditos e\ncompre uma arma mais forte!"
       - "\uD06C\uB808\uB527\uC744 \uC800\uC7A5\uD558\uACE0\n\uB354 \uAC15\uB825\uD55C
         \uBB34\uAE30\uB97C \uAD6C\uC785\uD558\uC138\uC694!"
+      - "Economize cr\xE9ditos e\ncompre uma arma mais forte!"
       - "\xA1Ahorre cr\xE9ditos y\ncompre un arma m\xE1s poderosa!"
       - "\u7BC0\u7701\u7A4D\u5206\u4F75\n\u8CFC\u8CB7\u66F4\u5F37\u5927\u7684\u6B66\u5668\uFF01"
       - "\u8282\u7701\u79EF\u5206\u5E76\n\u8D2D\u4E70\u66F4\u5F3A\u5927\u7684\u6B66\u5668\uFF01"
@@ -313,8 +313,8 @@ MonoBehaviour:
       - 'Don''t need to return
 
         to the first stage!'
-      - "N\xE3o precisa voltar\npara a primeira fase!"
       - "\uCC98\uC74C \uB2E8\uACC4\uB85C \uB3CC\uC544\uAC08\n\uD544\uC694\uAC00 \uC5C6\uC2B5\uB2C8\uB2E4!"
+      - "N\xE3o precisa voltar\npara a primeira fase!"
       - "\xA1No necesitas volver\na la primera etapa!"
       - "\u60A8\u7121\u9700\u8FD4\u56DE\u7B2C\u4E00\u968E\u6BB5\uFF01"
       - "\u60A8\u65E0\u9700\u8FD4\u56DE\u7B2C\u4E00\u9636\u6BB5\uFF01"
@@ -329,8 +329,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Check the best players!
-      - Veja os melhores jogadores!
       - "\uCD5C\uACE0\uC758 \uC120\uC218\uB97C \uD655!"
+      - Veja os melhores jogadores!
       - "\xA1Mira a los mejores jugadores!"
       - "\u770B\u770B\u6700\u597D\u7684\u7403\u54E1\uFF01"
       - "\u770B\u770B\u6700\u597D\u7684\u7403\u5458\uFF01"
@@ -395,8 +395,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Me
-      - Eu
       - "\uB098"
+      - Eu
       - "M\xED"
       - "\u6211"
       - "\u6211"
@@ -411,8 +411,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - player
-      - jogador
       - "\uD50C\uB808\uC774\uC5B4"
+      - jogador
       - jugador
       - "\u73A9\u5BB6"
       - "\u73A9\u5BB6"
@@ -427,8 +427,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - rank
-      - rank
       - "\uC21C\uC704"
+      - rank
       - rank
       - "\u79E9"
       - "\u79E9"
@@ -443,8 +443,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - RANKING
-      - RANKING
       - "\uB7AD\uD0B9"
+      - RANKING
       - RANKING
       - "\u6392\u884C"
       - "\u6392\u884C"
@@ -459,8 +459,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - stage
-      - fase
       - stage
+      - fase
       - fase
       - "\u968E\u6BB5"
       - "\u9636\u6BB5"
@@ -491,8 +491,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - STAGE
-      - FASE
       - STAGE
+      - FASE
       - FASE
       - "\u968E\u6BB5"
       - "\u9636\u6BB5"
@@ -507,8 +507,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - 2x POWER
-      - 2x PODER
       - "2x \uD798"
+      - 2x PODER
       - 2x PODER
       - "2 \u500D\u529F\u7387"
       - "2 \u500D\u529F\u7387"
@@ -523,8 +523,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - + SPEED
-      - + VELOCIDADE
       - "+ \uC18D\uB3C4"
+      - + VELOCIDADE
       - + VELOCIDAD
       - "+ \u901F\u5EA6"
       - "+ \u901F\u5EA6"
@@ -539,8 +539,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Music
-      - "M\xFAsica"
       - "\uC74C\uC545"
+      - "M\xFAsica"
       - "M\xFAsica"
       - "\u97F3\u6A02"
       - "\u97F3\u4E50"
@@ -555,8 +555,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Privacy Policy
-      - "Pol\xEDticas de Privacidade"
       - "\uAC1C\uC778 \uC815\uBCF4 \uBCF4\uD638 \uC815\uCC45"
+      - "Pol\xEDticas de Privacidade"
       - "Pol\xEDtica de Privacidad"
       - "\u96B1\u79C1\u653F\u7B56"
       - "\u9690\u79C1\u653F\u7B56"
@@ -571,8 +571,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Privacy Settings
-      - "Configura\xE7\xE3o de Privacidade"
       - "\uAC1C\uC778 \uC815\uBCF4 \uC124\uC815"
+      - "Configura\xE7\xE3o de Privacidade"
       - "Configuraci\xF3n de Privacidad"
       - "\u96B1\u79C1\u8A2D\u7F6E"
       - "\u9690\u79C1\u8BBE\u7F6E"
@@ -587,8 +587,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Sound
-      - Som
       - "\uC624\uB514\uC624"
+      - Som
       - Sonido
       - "\u8072\u97F3"
       - "\u58F0\u97F3"
@@ -603,8 +603,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - SETTINGS
-      - "CONFIGURA\xC7\xD5ES"
       - "\uC124\uC815"
+      - "CONFIGURA\xC7\xD5ES"
       - "CONFIGURACI\xD3N"
       - "\u8A2D\u7F6E"
       - "\u8BBE\u7F6E"
@@ -619,8 +619,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Version
-      - "Vers\xE3o"
       - "\uBC84\uC804"
+      - "Vers\xE3o"
       - "Versi\xF3n"
       - "\u7248\u672C"
       - "\u7248\u672C"
@@ -635,8 +635,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - EXTRA
-      - EXTRA
       - "\uCD94\uAC00"
+      - EXTRA
       - EXTRA
       - "\u984D\u5916\u7684"
       - "\u989D\u5916\u7684"
@@ -651,8 +651,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Lv.
-      - Nv.
       - Lv.
+      - Nv.
       - Nv.
       - "\u4F4E\u58D3\u3002"
       - "\u4F4E\u538B\u3002"
@@ -699,8 +699,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Start Stage
-      - Fase Inicial
       - "\uC2A4\uD0C0\uD2B8 \uC2A4\uD14C\uC774\uC9C0"
+      - Fase Inicial
       - Fase Inicial
       - "\u958B\u59CB\u968E\u6BB5"
       - "\u5F00\u59CB\u9636\u6BB5"
@@ -715,8 +715,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Stage {0}    <sprite=0>
-      - Fase {0}    <sprite=0>
       - Stage {0}    <sprite=0>
+      - Fase {0}    <sprite=0>
       - Fase {0}    <sprite=0>
       - "\u63EE\u624B {0}   <sprite=0>"
       - "\u6325\u624B {0}   <sprite=0>"
@@ -731,8 +731,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - WEAPONS
-      - ARMAS
       - "\uBB34\uAE30"
+      - ARMAS
       - ARMAS
       - "\u6B66\u5668"
       - "\u6B66\u5668"
@@ -747,8 +747,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - CONTINUE
-      - CONTINUAR
       - "\uACC4\uC18D\uD55C\uB2E4"
+      - CONTINUAR
       - CONTINUAR
       - "\u7E7C\u7E8C"
       - "\u7EE7\u7EED"
@@ -763,8 +763,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - EXIT
-      - SAIR
       - "\uB098\uAC04\uB2E4"
+      - SAIR
       - SALIR
       - "\u51FA\u53E3"
       - "\u51FA\u53E3"
@@ -779,9 +779,9 @@ MonoBehaviour:
       Description: 
       Languages:
       - Do you want to keep playing?
-      - "Voltar \xE0 sele\xE7\xE3o de fases?\nVoc\xEA n\xE3o perder\xE1 seus cr\xE9ditos"
       - "\uB2E8\uACC4 \uC120\uD0DD\uC73C\uB85C \uB3CC\uC544\uAC00\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?\r\n\uD06C\uB808\uB527\uC744
         \uC783\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4."
+      - "Voltar \xE0 sele\xE7\xE3o de fases?\nVoc\xEA n\xE3o perder\xE1 seus cr\xE9ditos"
       - "\xBFVolver a la selecci\xF3n de fases?\r\nNo perder\xE1s tus cr\xE9ditos"
       - "\u56DE\u5230\u968E\u6BB5\u9078\u64C7\uFF1F\r\n\u4F60\u4E0D\u6703\u5931\u53BB\u4F60\u7684\u7A4D\u5206"
       - "\u56DE\u5230\u9636\u6BB5\u9009\u62E9\uFF1F\r\n\u4F60\u4E0D\u4F1A\u5931\u53BB\u4F60\u7684\u79EF\u5206"
@@ -801,8 +801,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - CONTINUE
-      - CONTINUAR
       - "\uACC4\uC18D\uD55C\uB2E4"
+      - CONTINUAR
       - CONTINUAR
       - "\u7E7C\u7E8C"
       - "\u7EE7\u7EED"
@@ -817,8 +817,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - EXIT
-      - SAIR
       - "\uB098\uAC04\uB2E4"
+      - SAIR
       - SALIR
       - "\u51FA\u53E3"
       - "\u51FA\u53E3"
@@ -833,8 +833,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Do you want to keep playing? 1234
-      - Deseja continuar jogando?
       - "\uACC4\uC18D \uD50C\uB808\uC774 \uD560 \uAC74\uAC00\uC694?"
+      - Deseja continuar jogando?
       - "\xBFQuieres seguir jugando?"
       - "\u4F60\u60F3\u7E7C\u7E8C\u73A9\u55CE\uFF1F"
       - "\u4F60\u60F3\u7EE7\u7EED\u73A9\u5417\uFF1F"
@@ -849,9 +849,9 @@ MonoBehaviour:
       Description: 
       Languages:
       - Would you like to be notified about game events and gifts?
-      - Gostaria de ser notificado sobre eventos e presentes do jogo?
       - "\uAC8C\uC784 \uC774\uBCA4\uD2B8 \uBC0F \uC120\uBB3C\uC5D0 \uB300\uD55C \uC54C\uB9BC\uC744
         \uBC1B\uACE0 \uC2F6\uC73C\uC2E0\uAC00\uC694?"
+      - Gostaria de ser notificado sobre eventos e presentes do jogo?
       - "\xBFTe gustar\xEDa recibir notificaciones sobre eventos y regalos del juego?"
       - "\u60A8\u60F3\u6536\u5230\u6709\u95DC\u904A\u6232\u6D3B\u52D5\u548C\u79AE\u7269\u7684\u901A\u77E5\u55CE\uFF1F"
       - "\u60A8\u60F3\u6536\u5230\u6709\u5173\u6E38\u620F\u6D3B\u52A8\u548C\u793C\u7269\u7684\u901A\u77E5\u5417\uFF1F"
@@ -866,8 +866,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - Not now...
-      - "N\xE3o agora..."
       - "\uB098\uC911\uC5D0..."
+      - "N\xE3o agora..."
       - Ahora no...
       - "\u73FE\u5728\u4E0D\u8981..."
       - "\u73B0\u5728\u4E0D\u8981..."
@@ -882,8 +882,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - NOTIFICATION
-      - "NOTIFICA\xC7\xC3O"
       - "\uC54C\uB9BC"
+      - "NOTIFICA\xC7\xC3O"
       - "NOTIFICACI\xD3N"
       - "\u901A\u77E5"
       - "\u901A\u77E5"
@@ -898,8 +898,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - YES
-      - SIM
       - "\uC608"
+      - SIM
       - "S\xCD"
       - "\u662F\u7684"
       - "\u662F\u7684"
@@ -914,8 +914,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - I LOVED IT!
-      - ADOREI!
       - "\uC7AC\uBBF8\uC788\uB2E4."
+      - ADOREI!
       - "\xA1ME ENCANT\xD3!"
       - "\u6211\u611B\u5B83\uFF01"
       - "\u6211\u7231\u5B83\uFF01"
@@ -930,8 +930,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - I didn't like it...
-      - "n\xE3o gostei..."
       - "\uBCC4\uB85C\uB2E4"
+      - "n\xE3o gostei..."
       - "no me gust\xF3..."
       - "\u6211\u4E0D\u559C\u6B61\u5B83..."
       - "\u6211\u4E0D\u559C\u6B22\u5B83..."
@@ -946,8 +946,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - 'Suggested improvements:'
-      - "Sugest\xE3o de melhorias: "
       - "\uC81C\uC548\uB41C \uAC1C\uC120 \uC0AC\uD56D:"
+      - "Sugest\xE3o de melhorias: "
       - 'Mejoras sugeridas:'
       - "\u5EFA\u8B70\u7684\u6539\u9032\uFF1A"
       - "\u5EFA\u8BAE\u7684\u6539\u8FDB\uFF1A"
@@ -962,8 +962,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - What do you think about this game?
-      - O que esta achando do joguinho?
       - "\uC774 \uAC8C\uC784\uC5D0 \uB300\uD574 \uC5B4\uB5BB\uAC8C \uC0DD\uAC01\uD558\uC138\uC694?"
+      - O que esta achando do joguinho?
       - "\xBFQu\xE9 opinas sobre este juego?"
       - "\u4F60\u89BA\u5F97\u9019\u500B\u904A\u6232\u600E\u9EBC\u6A23\uFF1F"
       - "\u4F60\u89C9\u5F97\u8FD9\u4E2A\u6E38\u620F\u600E\u4E48\u6837\uFF1F"
@@ -978,8 +978,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - SEND EMAIL
-      - ENVIAR EMAIL
       - "\uC774\uBA54\uC77C \uBCF4\uB0B4\uAE30"
+      - ENVIAR EMAIL
       - ENVIAR EMAIL
       - "\u767C\u9001\u96FB\u5B50\u90F5\u4EF6"
       - "\u53D1\u7535\u5B50\u90AE\u4EF6"
@@ -994,8 +994,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - later
-      - depois
       - "\uB098\uC911\uC5D0"
+      - depois
       - "despu\xE9s"
       - "\u4E4B\u5F8C"
       - "\u4E4B\u540E"
@@ -1010,8 +1010,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - What do we need to improve?
-      - O que precisamos melhorar?
       - "\uAC1C\uC120\uD574\uC57C \uD560 \uC810\uC740 \uBB34\uC5C7\uC785\uB2C8\uAE4C?"
+      - O que precisamos melhorar?
       - "\xBFQu\xE9 necesitamos mejorar?"
       - "\u6211\u5011\u9700\u8981\u6539\u9032\u4EC0\u9EBC\uFF1F"
       - "\u6211\u4EEC\u9700\u8981\u6539\u8FDB\u4EC0\u4E48\uFF1F"
@@ -1026,8 +1026,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - FEEDBACK
-      - FEEDBACK
       - "\uD53C\uB4DC\uBC31"
+      - FEEDBACK
       - FEEDBACK
       - "\u53CD\u994B"
       - "\u53CD\u9988"
@@ -1042,8 +1042,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - ENJOYING THIS GAME?
-      - GOSTANDO DO JOGO?
       - "\uC774 \uAC8C\uC784\uC744 \uC990\uAE30\uACE0 \uACC4\uC2E0\uAC00\uC694?"
+      - GOSTANDO DO JOGO?
       - "\xBFTE GUSTA ESTE JUEGO?"
       - "\u559C\u6B61\u9019\u500B\u904A\u6232\u55CE\uFF1F"
       - "\u559C\u6B22\u8FD9\u4E2A\u6E38\u620F\u5417\uFF1F"
@@ -1058,8 +1058,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - REPLAY
-      - REJOGAR
       - "\uC7AC\uC0DD"
+      - REJOGAR
       - REJUGAR
       - "\u91CD\u64AD"
       - "\u91CD\u64AD"
@@ -1074,8 +1074,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - VICTORY!
-      - "VIT\xD3RIA!"
       - "\uC2B9\uB9AC!"
+      - "VIT\xD3RIA!"
       - "\xA1VICTORIA!"
       - "\u52DD\u5229\uFF01"
       - "\u80DC\u5229\uFF01"
@@ -1090,8 +1090,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - STAGE {0}
-      - FASE {0}
       - STAGE {0}
+      - FASE {0}
       - FASE {0}
       - "\u63EE\u624B {0}"
       - "\u6325\u624B {0}"
@@ -1106,8 +1106,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - 2x POWER
-      - 2x PODER
       - "2x \uD798"
+      - 2x PODER
       - 2x PODER
       - "2 \u500D\u529F\u7387"
       - "2 \u500D\u529F\u7387"
@@ -1122,8 +1122,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - + COINS
-      - + MOEDAS
       - "+ \uCF54\uC778\uBCF4\uC0C1"
+      - + MOEDAS
       - + MONEDAS
       - "+ \u786C\u5E63"
       - "+ \u786C\u5E01"
@@ -1138,8 +1138,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - + SPEED
-      - + VELOCIDADE
       - "+ \uC18D\uB3C4"
+      - + VELOCIDADE
       - + VELOCIDAD
       - "+ \u901F\u5EA6"
       - "+ \u901F\u5EA6"
@@ -1154,9 +1154,9 @@ MonoBehaviour:
       Description: 
       Languages:
       - Watch a short video to receive {0} coins?
-      - "Assistir um v\xEDdeo curto para receber {0} moedas?"
       - "\uC9E7\uC740 \uBE44\uB514\uC624\uB97C \uC2DC\uCCAD\uD558\uACE0 {0} \uCF54\uC778
         \uC744 \uBC1B\uC73C\uC2E4\uB798\uC694?"
+      - "Assistir um v\xEDdeo curto para receber {0} moedas?"
       - "\xBFMira un video corto para recibir {0} monedas?"
       - "\u89C0\u770B\u77ED\u8996\u983B\u7372\u5F97 {0} \u500B\u91D1\u5E63\uFF1F"
       - "\u89C2\u770B\u77ED\u89C6\u9891\u83B7\u5F97 {0} \u4E2A\u91D1\u5E01\uFF1F"
@@ -1171,8 +1171,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - LATER
-      - "AGORA N\xC3O"
       - "\uB098\uC911\uC5D0"
+      - "AGORA N\xC3O"
       - "M\xC1S TARDE"
       - "\u4E4B\u5F8C"
       - "\u4E4B\u540E"
@@ -1187,8 +1187,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - '{0} COINS'
-      - '{0} MOEDAS'
       - "{0} \uCF54\uC778"
+      - '{0} MOEDAS'
       - '{0} MONEDAS'
       - "{0} \u500B\u786C\u5E63"
       - "{0} \u4E2A\u786C\u5E01"
@@ -1203,8 +1203,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - COLLECT
-      - COLETAR
       - "\uBC1B\uB294\uB2E4"
+      - COLETAR
       - RECOGER
       - "\u6536\u96C6"
       - "\u6536\u96C6"
@@ -1219,9 +1219,9 @@ MonoBehaviour:
       Description: 
       Languages:
       - Watch a short video to duplicate your power for {0}s?
-      - "Assistir um v\xEDdeo curto para duplicar seu poder por {0}s?"
       - "\uC9E7\uC740 \uBE44\uB514\uC624\uB97C \uBCF4\uACE0 {0}\uCD08 \uB3D9\uC548
         \uB2F9\uC2E0\uC758 \uD798\uC744 \uBCF5\uC81C\uD558\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+      - "Assistir um v\xEDdeo curto para duplicar seu poder por {0}s?"
       - "\xBFVes un video corto para duplicar tus poder durante {0}s?"
       - "\u89C0\u770B\u4E00\u6BB5\u77ED\u8996\u983B\u4F86\u8907\u88FD\u60A8 {0} \u7684\u529B\u91CF\uFF1F"
       - "\u89C2\u770B\u4E00\u6BB5\u77ED\u89C6\u9891\u6765\u590D\u5236\u60A8 {0} \u7684\u529B\u91CF\uFF1F"
@@ -1236,8 +1236,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - LATER
-      - "AGORA N\xC3O"
       - "\uB098\uC911\uC5D0"
+      - "AGORA N\xC3O"
       - "M\xC1S TARDE"
       - "\u4E4B\u5F8C"
       - "\u4E4B\u540E"
@@ -1252,8 +1252,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - 2x POWER
-      - 2x PODER
       - "2x \uD798"
+      - 2x PODER
       - 2x PODER
       - "2 \u500D\u529F\u7387"
       - "2 \u500D\u529F\u7387"
@@ -1268,8 +1268,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - ACTIVATE
-      - ATIVAR
       - "\uD65C\uC131\uD654"
+      - ATIVAR
       - ACTIVAR
       - "\u555F\u7528"
       - "\u542F\u7528"
@@ -1284,9 +1284,9 @@ MonoBehaviour:
       Description: 
       Languages:
       - Watch a short video to increase game speed during {0}s?
-      - "Assistir um v\xEDdeo curto para aumentar a velocidade do jogo durante {0}s?"
       - "\uC9E7\uC740 \uC601\uC0C1\uC744 \uBCF4\uACE0 {0}\uCD08 \uB3D9\uC548 \uAC8C\uC784
         \uC18D\uB3C4\uB97C \uB192\uC774\uC2DC\uACA0\uC2B5\uB2C8\uAE4C?"
+      - "Assistir um v\xEDdeo curto para aumentar a velocidade do jogo durante {0}s?"
       - "\xBFVes un video corto para aumentar la velocidad del juego durante {0}s?"
       - "\u5728 {0} \u79D2\u5167\u89C0\u770B\u77ED\u8996\u983B\u4EE5\u63D0\u9AD8\u904A\u6232\u901F\u5EA6\uFF1F"
       - "\u5728 {0} \u79D2\u5185\u89C2\u770B\u77ED\u89C6\u9891\u4EE5\u63D0\u9AD8\u6E38\u620F\u901F\u5EA6\uFF1F"
@@ -1302,8 +1302,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - LATER
-      - "AGORA N\xC3O"
       - "\uB098\uC911\uC5D0"
+      - "AGORA N\xC3O"
       - "M\xC1S TARDE"
       - "\u4E4B\u5F8C"
       - "\u4E4B\u540E"
@@ -1318,8 +1318,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - + SPEED
-      - + VELOCIDADE
       - "+ \uC18D\uB3C4"
+      - + VELOCIDADE
       - + VELOCIDAD
       - "+ \u901F\u5EA6"
       - "+ \u901F\u5EA6"
@@ -1334,8 +1334,8 @@ MonoBehaviour:
       Description: 
       Languages:
       - ACTIVATE
-      - ATIVAR
       - "\uD65C\uC131\uD654"
+      - ATIVAR
       - ACTIVAR
       - "\u555F\u7528"
       - "\u542F\u7528"
@@ -1352,11 +1352,11 @@ MonoBehaviour:
     - Name: English
       Code: en
       Flags: 0
-    - Name: Portuguese
-      Code: pt
-      Flags: 0
     - Name: Korean
       Code: ko
+      Flags: 0
+    - Name: Portuguese
+      Code: pt
       Flags: 0
     - Name: Spanish
       Code: es

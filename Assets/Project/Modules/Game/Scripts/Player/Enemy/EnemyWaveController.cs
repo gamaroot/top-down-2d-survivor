@@ -24,6 +24,8 @@ namespace Game
         }
         private EnemyWaveState _state;
 
+        private IBody _playerBody;
+
         private int _totalEnemyTypes;
         private double _spawnProbabilitiesSum;
         private double[] _spawnProbabilities;
@@ -56,6 +58,11 @@ namespace Game
             {
                 this._timeElapsed += Time.deltaTime;
             }
+        }
+
+        internal void Setup(IBody playerBody)
+        {
+            this._playerBody = playerBody;
         }
 
         internal void StartSpawn()
@@ -130,6 +137,8 @@ namespace Game
                 enemy.OnHealthUpdated = onHealthUpdated;
             }
 
+            EnemyMarkPool.Spawn(this._playerBody, enemy);
+
             return enemy;
         }
 
@@ -170,23 +179,23 @@ namespace Game
             if (isBoss)
             {
                 if (randomValue > 0.5f)
-                    return new Vector2(bounds.Left - 1.5f, UnityEngine.Random.Range(-2f, 2f));
+                    return new Vector2(bounds.Left - 2f, UnityEngine.Random.Range(-2f, 2f));
                 else
-                    return new Vector2(bounds.Right + 1.5f, UnityEngine.Random.Range(-2f, 2f));
+                    return new Vector2(bounds.Right + 2f, UnityEngine.Random.Range(-2f, 2f));
             }
             else
             {
                 if (randomValue > 0.75f)
-                    return new Vector2(UnityEngine.Random.Range(bounds.Left - 1f, bounds.Right + 1f), bounds.Top);
+                    return new Vector2(UnityEngine.Random.Range(bounds.Left - 2f, bounds.Right + 2f), bounds.Top + 2f);
 
                 else if (randomValue > 0.5f)
-                    return new Vector2(UnityEngine.Random.Range(bounds.Left - 1f, bounds.Right + 1f), bounds.Bottom + 3f);
+                    return new Vector2(UnityEngine.Random.Range(bounds.Left - 2f, bounds.Right + 2f), bounds.Bottom - 2f);
 
                 else if (randomValue > 0.25f)
-                    return new Vector2(bounds.Left - 1f, UnityEngine.Random.Range(bounds.Bottom + 2f, bounds.Top));
+                    return new Vector2(bounds.Left - 2f, UnityEngine.Random.Range(bounds.Bottom - 2f, bounds.Top + 2f));
 
                 else
-                    return new Vector2(bounds.Right + 1f, UnityEngine.Random.Range(bounds.Bottom + 2f, bounds.Top));
+                    return new Vector2(bounds.Right + 2f, UnityEngine.Random.Range(bounds.Bottom - 2f, bounds.Top + 2f));
             }
         }
 

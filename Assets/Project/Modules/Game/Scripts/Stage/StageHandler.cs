@@ -14,7 +14,7 @@ namespace Game
         [SerializeField] private SpriteRenderer _radar;
         [SerializeField] private SpriteRenderer _background;
 
-        private IPlayerInfo _playerInfo;
+        private IBody _playerInfo;
 
         private void OnValidate()
         {
@@ -46,7 +46,7 @@ namespace Game
             Vector2 stageSize = CameraHandler.Instance.GetCameraSize();
             stageSize.x *= 1.5f;
 
-            for (int index = 0; index < Enum<Alignment>.Length(); index++)
+            for (int index = 1; index <= Enum<Alignment>.Length() - 1; index++)
             {
                 var alignment = (Alignment)index;
 
