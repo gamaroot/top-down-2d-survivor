@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System;
 using UnityEngine;
 
 namespace Utils
@@ -30,6 +32,11 @@ namespace Utils
                 Top = this.CameraBounds.Top + position.y,
                 Bottom = this.CameraBounds.Bottom + position.y
             };
+        }
+
+        internal void ShakeIt(float duration, float strength)
+        {
+            this.MainCamera.DOShakePosition(duration, strength);
         }
 
         private CameraBounds GetCameraBounds()

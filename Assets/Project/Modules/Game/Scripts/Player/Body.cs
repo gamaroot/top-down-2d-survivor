@@ -18,7 +18,11 @@ namespace Game
                 if (this._health == value)
                     return;
 
+                if (value < this._health)
+                    this.OnHealthLose?.Invoke();
+
                 this._health = value > 0 ? value : 0;
+
                 this.OnHealthUpdated.Invoke(this._health, this._maxHealth);
             }
         }
@@ -37,6 +41,7 @@ namespace Game
 
         internal Action<DamagerObjectType> OnDestroy { private get; set; }
         internal Action<float, float> OnHealthUpdated = (_,_) => { };
+        internal Action OnHealthLose;
 
         public Vector3 GetPosition()
         {

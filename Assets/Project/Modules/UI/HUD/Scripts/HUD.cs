@@ -23,6 +23,8 @@ namespace Game
         [SerializeField] private Color _levelBarStartColor, _levelBarEndColor;
         [SerializeField] private Image _levelBarFill;
 
+        [SerializeField] private Color _damageBackgroundColor;
+
         private Tweener _tweenPercentHealth;
 
         private void Start()
@@ -70,6 +72,16 @@ namespace Game
             }
             this._sliderLevelBar.maxValue = state.Goal;
             this._sliderLevelBar.value = state.Progress;
+        }
+
+        internal void DisplayPlayerCollision()
+        {
+            float duration = 1f;
+            CameraHandler.Instance.ShakeIt(duration, 3f);
+            CameraHandler.Instance.MainCamera.backgroundColor = this._damageBackgroundColor;
+
+            CameraHandler.Instance.MainCamera.DOKill();
+            CameraHandler.Instance.MainCamera.DOColor(Color.clear, duration);
         }
 
         internal void UpdateHealth(float health, float maxHealth)

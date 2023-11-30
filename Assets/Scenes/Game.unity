@@ -2786,7 +2786,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.345
+  m_Radius: 1
 --- !u!114 &973688403
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5520,6 +5520,7 @@ MonoBehaviour:
   _levelBarStartColor: {r: 0.9647059, g: 0.89411765, b: 0.3254902, a: 1}
   _levelBarEndColor: {r: 0.5471698, g: 0.04903879, b: 0.04903879, a: 1}
   _levelBarFill: {fileID: 737352826}
+  _damageBackgroundColor: {r: 0.33962262, g: 0, b: 0, a: 0}
 --- !u!1 &1880724024
 GameObject:
   m_ObjectHideFlags: 0
@@ -6363,7 +6364,6 @@ MonoBehaviour:
   <Rigidbody>k__BackingField: {fileID: 3332284052317550338}
   _recoverDuration: 10
   _movementSpeed: 0.1
-  _hud: {fileID: 1874478830}
   _radar: {fileID: 3332284052317550340}
 --- !u!95 &3332284052317550340
 Animator:

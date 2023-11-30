@@ -12,7 +12,6 @@ namespace Game
         [SerializeField] private float _movementSpeed = 10f;
 
         [Header("Components")]
-        [SerializeField] private HUD _hud;
         [SerializeField] private Animator _radar;
 
         internal static IBody Info { get; private set; }
@@ -44,7 +43,6 @@ namespace Game
                     base.MaxHealth = ((StatsData)data).GetValue();
             };
             base.Health = maxHealth;
-            base.OnHealthUpdated = this._hud.UpdateHealth;
             base.MaxHealth = maxHealth;
         }
 

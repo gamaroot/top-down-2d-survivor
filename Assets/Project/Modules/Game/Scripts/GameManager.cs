@@ -31,6 +31,8 @@ namespace Game
             SceneNavigator.Instance.AddListenerOnScreenStateChange(this.OnSceneStateChange);
 
             this._player.Setup(this._itemDatabase.GetStatsValue(UpgradeType.MAX_HEALTH));
+            this._player.OnHealthLose = this._hud.DisplayPlayerCollision;
+            this._player.OnHealthUpdated = this._hud.UpdateHealth;
             this._player.OnDestroy = (_) => this.OnPlayerLose();
 
             this._matchTimeHandler.OnTimeout = this.OnPlayerLose;
