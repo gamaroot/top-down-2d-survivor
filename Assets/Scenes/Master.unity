@@ -959,6 +959,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e351ec85fb11f3e45b0eef2898a43df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bottomMarginInPixels: 380
   _prefab: {fileID: -8180662736863114214, guid: 88a970fce50d26e4eba437359a637754, type: 3}
 --- !u!114 &1053414565 stripped
 MonoBehaviour:

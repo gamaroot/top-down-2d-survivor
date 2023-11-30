@@ -1,6 +1,5 @@
 using UnityEngine;
 using Utils;
-using static UnityEngine.Rendering.DebugUI;
 
 namespace Game
 {
@@ -9,6 +8,7 @@ namespace Game
         [SerializeField] private SpriteRenderer _spriteRenderer;
 
         private IBody _playerBody, _enemyBody;
+        private float _bottomMargin;
 
         private void OnValidate()
         {
@@ -16,10 +16,11 @@ namespace Game
                 this._spriteRenderer = base.GetComponent<SpriteRenderer>();
         }
 
-        internal void Setup(IBody playerBody, IBody enemyBody)
+        internal void Setup(IBody playerBody, IBody enemyBody, float bottomMargin)
         {
             this._playerBody = playerBody;
             this._enemyBody = enemyBody;
+            this._bottomMargin = bottomMargin;
         }
 
         private void Update()
@@ -69,7 +70,7 @@ namespace Game
             else if (enemyPosition.y < bounds.Bottom - 1f)
             {
                 alignment = Alignment.BOTTOM;
-                markPosition.y = bounds.Bottom + 0.5f;
+                markPosition.y = bounds.Bottom + 0.5f + this._bottomMargin;
             }
 
             // Forces to stay inside camera bounds
@@ -83,7 +84,7 @@ namespace Game
                 markPosition.y = bounds.Top - 0.5f;
 
             else if (markPosition.y < bounds.Bottom)
-                markPosition.y = bounds.Bottom + 0.5f;
+                markPosition.y = bounds.Bottom + 0.5f + this._bottomMargin;
 
             base.transform.position = markPosition;
             return alignment;
