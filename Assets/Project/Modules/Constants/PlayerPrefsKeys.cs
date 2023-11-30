@@ -13,6 +13,7 @@ namespace Game
         internal const string LAST_APP_UPDATE_REQUESTED_KEY = "LAST_APP_UPDATE_REQUESTED";
 
         // Statistics
+        internal const string STATISTICS_TOTAL_ENEMIES_DESTROYED_KEY = "STATISTICS_TOTAL_ENEMIES_DESTROYED";
         internal const string STATISTICS_TOTAL_MATCHES_KEY = "STATISTICS_TOTAL_MATCHES";
         internal const string STATISTICS_HIGHEST_WAVE_KEY = "STATISTICS_HIGHEST_WAVE";
 

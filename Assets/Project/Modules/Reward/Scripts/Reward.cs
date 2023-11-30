@@ -11,9 +11,6 @@ namespace Game
 
         internal void OnEnemyDefeat(bool isBoss, DamagerObjectType killedBy)
         {
-            if (isBoss && killedBy != DamagerObjectType.Bullet)
-                return;
-
             float reward = Math.Max(1, Statistics.Instance.CurrentWave / 1.5f);
             if (isBoss)
                 reward *= 20f;

@@ -49,6 +49,8 @@ namespace I2.Loc
 		{
 			public static string LEVEL 		{ get{ return LocalizationManager.GetTranslation ("UpgradePanel/LEVEL"); } }
 			public static string MAX 		{ get{ return LocalizationManager.GetTranslation ("UpgradePanel/MAX"); } }
+			public static string UNLOCK_AT_SINGULAR 		{ get{ return LocalizationManager.GetTranslation ("UpgradePanel/UNLOCK_AT_SINGULAR"); } }
+			public static string UNLOCK_AT 		{ get{ return LocalizationManager.GetTranslation ("UpgradePanel/UNLOCK_AT"); } }
 		}
 	}
 
@@ -99,6 +101,8 @@ namespace I2.Loc
 		{
 		    public const string LEVEL = "UpgradePanel/LEVEL";
 		    public const string MAX = "UpgradePanel/MAX";
+		    public const string UNLOCK_AT_SINGULAR = "UpgradePanel/UNLOCK_AT_SINGULAR";
+		    public const string UNLOCK_AT = "UpgradePanel/UNLOCK_AT";
 		}
 	}
 }

@@ -1,4 +1,5 @@
 using Database;
+using I2.Loc;
 using TMPro;
 using UnityEngine;
 
@@ -16,27 +17,38 @@ namespace Game
         {
             base.Load(data);
 
-            var weaponData = data as WeaponData;
+            int unlockLevel = (data as WeaponData).UnlockLevel;
 
 #if DEBUG_MODE
             this.RemoveLocker();
 #else
-            if (Statistics.Instance.HighestWave >= weaponData.UnlockLevel)
+            if (Statistics.Instance.TotalEnemiesDestroyed >= unlockLevel)
             {
                 this.RemoveLocker();
             }
             else
             {
                 this._locker.SetActive(true);
-                this._textLocked.text = string.Format(_textLocked.text, weaponData.UnlockLevel);
-                Statistics.Instance.OnHighestWaveChange += OnHighestLevelChange;
 
-                void OnHighestLevelChange(int highestLevel)
+                UpdateLockedText();
+                Statistics.Instance.OnTotalEnemiesDestroyedChange += OnTotalEnemiesDestroyedChange;
+
+                void UpdateLockedText()
                 {
-                    if (highestLevel >= weaponData.UnlockLevel)
+                    int enemiesLeft = unlockLevel - Statistics.Instance.TotalEnemiesDestroyed;
+                    string formatKey = enemiesLeft > 1 ? ScriptLocalization.UpgradePanel.UNLOCK_AT : 
+                                                         ScriptLocalization.UpgradePanel.UNLOCK_AT_SINGULAR;
+
+                    this._textLocked.text = string.Format(formatKey, enemiesLeft);
+                }
+
+                void OnTotalEnemiesDestroyedChange(int enemiesDestroyed)
+                {
+                    UpdateLockedText();
+                    if (enemiesDestroyed >= unlockLevel)
                     {
                         this.RemoveLocker();
-                        Statistics.Instance.OnHighestWaveChange -= OnHighestLevelChange;
+                        Statistics.Instance.OnTotalEnemiesDestroyedChange -= OnTotalEnemiesDestroyedChange;
                     }
                 }
             }
@@ -45,6 +57,8 @@ namespace Game
 
         private void RemoveLocker()
         {
+            if (!gameObject) return;
+
             this._content.SetActive(true);
             Destroy(this._locker);
         }

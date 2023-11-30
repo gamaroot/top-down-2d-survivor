@@ -96,8 +96,12 @@ namespace Game
 
         private void OnEnemyKilled(bool isBoss, DamagerObjectType killedBy)
         {
+            if (killedBy != DamagerObjectType.Bullet)
+                return;
+
+            Statistics.Instance.IncrementEnemiesDestroyed();
             Reward.Instance.OnEnemyDefeat(isBoss, killedBy);
-            if (isBoss && killedBy == DamagerObjectType.Bullet)
+            if (isBoss)
             {
                 this.OnPlayerWin();
             }

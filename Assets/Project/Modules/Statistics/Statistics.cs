@@ -7,18 +7,19 @@ namespace Game
     [Serializable]
     internal class Statistics
     {
-        internal float TotalMatches { get; private set; }
-        internal float TotalEnemiesDestroyed { get; private set; }
+        internal int TotalMatches { get; private set; }
+        internal int TotalEnemiesDestroyed { get; private set; }
         internal int HighestWave { get; private set; }
         internal int CurrentWave;
 
-        internal Action<int> OnHighestWaveChange;
+        internal Action<int> OnTotalEnemiesDestroyedChange;
 
         internal static void Load()
         {
             Instance = new Statistics
             {
-                TotalMatches = PlayerPrefs.GetFloat(PlayerPrefsKeys.STATISTICS_TOTAL_MATCHES_KEY),
+                TotalMatches = PlayerPrefs.GetInt(PlayerPrefsKeys.STATISTICS_TOTAL_MATCHES_KEY),
+                TotalEnemiesDestroyed = PlayerPrefs.GetInt(PlayerPrefsKeys.STATISTICS_TOTAL_ENEMIES_DESTROYED_KEY),
                 HighestWave = PlayerPrefs.GetInt(PlayerPrefsKeys.STATISTICS_HIGHEST_WAVE_KEY)
             };
         }
@@ -46,14 +47,20 @@ namespace Game
             this.SetHighestWave(this.CurrentWave);
         }
 
+        internal void IncrementEnemiesDestroyed()
+        {
+            this.OnTotalEnemiesDestroyedChange?.Invoke(++this.TotalEnemiesDestroyed);
+
+            PlayerPrefs.SetInt(PlayerPrefsKeys.STATISTICS_TOTAL_ENEMIES_DESTROYED_KEY, this.TotalEnemiesDestroyed);
+            PlayerPrefs.Save();
+        }
+
         private void SetHighestWave(int wave)
         {
             this.HighestWave = wave;
 
             PlayerPrefs.SetInt(PlayerPrefsKeys.STATISTICS_HIGHEST_WAVE_KEY, this.HighestWave);
             PlayerPrefs.Save();
-
-            OnHighestWaveChange?.Invoke(this.HighestWave);
         }
 
         internal int ResetCurrentWave() => this.CurrentWave = 0;

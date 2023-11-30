@@ -172,7 +172,7 @@ namespace Game
 
         private Vector2 GetSpawnPoint(bool isBoss)
         {
-            CameraBounds bounds = CameraHandler.Instance.CameraBounds;
+            CameraBounds bounds = CameraHandler.Instance.GetRelativeCameraBounds(this._playerBody.GetPosition());
 
             float randomValue = UnityEngine.Random.value;
 
