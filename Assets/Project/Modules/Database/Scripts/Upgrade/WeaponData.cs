@@ -11,6 +11,8 @@ namespace Database
         [HideInInspector]
         public float OrbitalRadius, OrbitalSpeed;
 
+        [field: SerializeField] public RuntimeAnimatorController DisplayAnimation { get; private set; }
+
         [field: SerializeField] public GameObject BulletPrefab { get; private set; }
         [field: SerializeField] public GameObject ImpactPrefab { get; private set; }
         [field: SerializeField] public int UnlockLevel { get; private set; }

@@ -13,11 +13,17 @@ namespace Game
         [SerializeField] private GameObject _locker;
         [SerializeField] private TextMeshProUGUI _textLocked;
 
+        [Header("Components")]
+        [SerializeField] private Animator _animator;
+
         internal override void Load(UpgradeItemData data)
         {
             base.Load(data);
 
-            int unlockLevel = (data as WeaponData).UnlockLevel;
+            var weaponData = data as WeaponData;
+            this._animator.runtimeAnimatorController = weaponData.DisplayAnimation;
+
+            int unlockLevel = weaponData.UnlockLevel;
 
 #if DEBUG_MODE
             this.RemoveLocker();

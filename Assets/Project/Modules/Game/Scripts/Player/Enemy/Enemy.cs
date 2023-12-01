@@ -33,8 +33,6 @@ namespace Game
             base.MaxHealth = base.Health;
             base.transform.localScale *= 4f;
             base.Damage = float.MaxValue;
-
-            this.Speed /= 2f;
         }
 
         internal override void OnHealthZero(DamagerObjectType type)
