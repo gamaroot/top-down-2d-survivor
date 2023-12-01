@@ -34,11 +34,6 @@ namespace Utils
             };
         }
 
-        internal void ShakeIt(float duration, float strength)
-        {
-            this.MainCamera.DOShakePosition(duration, strength);
-        }
-
         private CameraBounds GetCameraBounds()
         {
             var bounds = new Vector3(this.MainCamera.pixelWidth, this.MainCamera.pixelHeight, this.MainCamera.transform.position.z);

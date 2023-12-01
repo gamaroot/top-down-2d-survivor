@@ -48,7 +48,8 @@ namespace Game
             container.position = base.transform.position;
             container.SetParent(base.transform);
 
-            weapon.transform.SetParent(container, true);
+            weapon.transform.position = base.transform.position;
+            weapon.transform.SetParent(container);
 
             Transform orbitalWeapon = weaponObj.transform;
 

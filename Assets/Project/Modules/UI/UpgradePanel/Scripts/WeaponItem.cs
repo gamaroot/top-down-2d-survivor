@@ -47,8 +47,8 @@ namespace Game
                     UpdateLockedText();
                     if (enemiesDestroyed >= unlockLevel)
                     {
-                        this.RemoveLocker();
                         Statistics.Instance.OnTotalEnemiesDestroyedChange -= OnTotalEnemiesDestroyedChange;
+                        this.RemoveLocker();
                     }
                 }
             }
@@ -57,10 +57,11 @@ namespace Game
 
         private void RemoveLocker()
         {
-            if (!gameObject) return;
+            if (_content)
+                this._content.SetActive(true);
 
-            this._content.SetActive(true);
-            Destroy(this._locker);
+            if (_locker)
+                Destroy(this._locker);
         }
     }
 }

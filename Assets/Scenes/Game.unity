@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _database: {fileID: 11400000, guid: 1cc784bf1887d984291d24e4fa72b3e2, type: 2}
-  _enemiesPerWave: 32
+  _enemiesPerWave: 100
 --- !u!4 &241102754
 Transform:
   m_ObjectHideFlags: 0

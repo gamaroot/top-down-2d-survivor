@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BaseHealth>k__BackingField: 1.5
   <BaseDamage>k__BackingField: 10
-  <BaseSpeed>k__BackingField: 1
+  <BaseSpeed>k__BackingField: 5
   <Enemies>k__BackingField:
   - {fileID: 1345569872395323147, guid: ca59f6175c6c3cf478a4e59fb3aebcb2, type: 3}
   - {fileID: 9080741732899592232, guid: d72201216250b1d42a93da4b777114e6, type: 3}

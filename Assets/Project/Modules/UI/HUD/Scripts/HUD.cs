@@ -76,12 +76,8 @@ namespace Game
 
         internal void DisplayPlayerCollision()
         {
-            float duration = 1f;
-            CameraHandler.Instance.ShakeIt(duration, 3f);
-            CameraHandler.Instance.MainCamera.backgroundColor = this._damageBackgroundColor;
-
             CameraHandler.Instance.MainCamera.DOKill();
-            CameraHandler.Instance.MainCamera.DOColor(Color.clear, duration);
+            CameraHandler.Instance.MainCamera.DOColor(Color.clear, 1f);
         }
 
         internal void UpdateHealth(float health, float maxHealth)

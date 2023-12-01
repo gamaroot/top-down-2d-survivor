@@ -8,7 +8,7 @@ namespace Game
     internal class EnemyWaveController : MonoBehaviour
     {
         [SerializeField] private EnemyDatabase _database;
-        [SerializeField] private int _enemiesPerWave = 32;
+        [SerializeField] private int _enemiesPerWave = 100;
 
         internal Action<bool, DamagerObjectType> OnKillListener { private get; set; }
         internal Action<EnemyWaveState> StateUpdateListener { private get; set; }
@@ -49,7 +49,9 @@ namespace Game
             if (this._timeElapsed >= this._spawnDelay)
             {
                 this._timeElapsed = 0;
-                this._spawnDelay -= 0.05f;
+
+                if (this._spawnDelay > 0.35f)
+                    this._spawnDelay -= 0.05f;
 
                 this._totalSpawn++;
                 this.SpawnEnemy(this.GetEnemyType(), false, this.OnKill);
@@ -111,7 +113,7 @@ namespace Game
         {
             this._totalSpawn = 0;
             this._timeElapsed = 0;
-            this._spawnDelay = 1.75f;
+            this._spawnDelay = 2f;
             this.State = new EnemyWaveState
             {
                 Progress = 0,

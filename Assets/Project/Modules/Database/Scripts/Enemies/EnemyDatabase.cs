@@ -24,7 +24,7 @@ namespace Database
 
         public float GetSpeed(int level)
         {
-            return Math.Min(3f, this.BaseSpeed + (0.02f * level));
+            return Math.Min(10f, this.BaseSpeed + (0.02f * level));
         }
     }
 }
