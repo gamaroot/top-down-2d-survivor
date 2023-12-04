@@ -48,7 +48,11 @@ namespace Game
 
         internal bool NeedToShow(CoachMarkType type)
         {
+#if UNITY_WEBGL && !UNITY_EDITOR
+            return false;
+#else
             return PlayerPrefs.GetInt(this.GetKey(type), 0) == 0;
+#endif
         }
 
         internal bool NeedToShow(CoachMarkType[] types)
